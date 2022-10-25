@@ -3,7 +3,7 @@
   "artifacts": {
     "package-generator-cli": {
       "type": "executable",
-      "version": "0.3.0",
+      "version": "0.2.0",
       "variants": [
         {
           "path": "arm64-apple-macosx/bin/package-generator-cli",
