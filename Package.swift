@@ -9,9 +9,9 @@ let package = Package(
     .executable(name: "package-generator-cli", targets: ["PackageGeneratorCLI"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/JohnSundell/Files", from: "4.2.0"),
-    .package(url: "https://github.com/apple/swift-argument-parser", from: "1.1.4"),
-    .package(url: "https://github.com/apple/swift-syntax", .exact("0.50500.0")), // 0.50700.1
+    .package(url: "https://github.com/JohnSundell/Files.git", from: "4.2.0"),
+    .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.1.4"),
+    .package(url: "https://github.com/apple/swift-syntax.git", exact: "0.50500.0"),
   ],
   targets: [
     .binaryTarget(
