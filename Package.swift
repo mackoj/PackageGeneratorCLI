@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
   name: "PackageGeneratorCLI",
+  platforms: [
+    .macOS(.v12),
+  ],
   products: [
     .executable(name: "package-generator-cli", targets: ["PackageGeneratorCLI"]),
   ],
