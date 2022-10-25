@@ -4,25 +4,35 @@
 import PackageDescription
 
 let package = Package(
-    name: "PackageGeneratorCLI",
-    products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(
-            name: "PackageGeneratorCLI",
-            targets: ["PackageGeneratorCLI"]),
-    ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
-    ],
-    targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "PackageGeneratorCLI",
-            dependencies: []),
-        .testTarget(
-            name: "PackageGeneratorCLITests",
-            dependencies: ["PackageGeneratorCLI"]),
-    ]
+  name: "PackageGeneratorCLI",
+  products: [
+    .executable(name: "package-generator-cli", targets: ["PackageGeneratorCLI"]),
+  ],
+  dependencies: [
+    .package(url: "https://github.com/JohnSundell/Files", from: "4.2.0"),
+    .package(url: "https://github.com/apple/swift-argument-parser", from: "1.1.4"),
+    .package(url: "https://github.com/apple/swift-syntax", .exact("0.50500.0")), // 0.50700.1
+  ],
+  targets: [
+    .binaryTarget(
+      name: "lib_InternalSwiftSyntaxParser",
+      url: "https://github.com/keith/StaticInternalSwiftSyntaxParser/releases/download/5.5.2/lib_InternalSwiftSyntaxParser.xcframework.zip",
+      checksum: "96bbc9ab4679953eac9ee46778b498cb559b8a7d9ecc658e54d6679acfbb34b8"
+    ),
+    .executableTarget(
+      name: "PackageGeneratorCLI",
+      dependencies: [
+        "Files",
+        "lib_InternalSwiftSyntaxParser",
+        .product(name: "SwiftSyntax", package: "swift-syntax"),
+        .product(name: "ArgumentParser", package: "swift-argument-parser"),
+      ]
+    ),
+    .testTarget(
+      name: "PackageGeneratorCLITests",
+      dependencies: [
+        "PackageGeneratorCLI"
+      ]
+    ),
+  ]
 )

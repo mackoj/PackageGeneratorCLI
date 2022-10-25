@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "files",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JohnSundell/Files",
+      "state" : {
+        "revision" : "d273b5b7025d386feef79ef6bad7de762e106eaf",
+        "version" : "4.2.0"
+      }
+    },
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser",
+      "state" : {
+        "revision" : "9f39744e025c7d377987f30b03770805dcb0bcd1",
+        "version" : "1.1.4"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-syntax",
+      "state" : {
+        "revision" : "75e60475d9d8fd5bbc16a12e0eaa2cb01b0c322e",
+        "version" : "0.50500.0"
+      }
+    }
+  ],
+  "version" : 2
+}
