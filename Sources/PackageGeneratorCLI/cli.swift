@@ -19,16 +19,46 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
   var verbose: Bool = false
   
   
-  func generateParsedPackages() async throws -> [ParsedPackage] {
-    let sourceCodeFolder = try Folder(path: packageDirectory.path)
+  func generateParsedPackages() async -> [ParsedPackage] {
+    
+    
+    var sourceCodeFolder: Folder
+    do {
+      sourceCodeFolder = try Folder(path: packageDirectory.path)
+    } catch {
+      fatalError("Failed to create Folder with \(packageDirectory.path)")
+    }
+    
     var parsedPackages: [ParsedPackage] = []
-    let fileData = try Data(contentsOf: inputFileURL)
-    let lines = try JSONDecoder().decode([String].self, from: fileData)
+    var fileData: Data
+    do {
+      fileData = try Data(contentsOf: inputFileURL)
+    } catch {
+      fatalError("Failed to create Data from \(inputFileURL.path)")
+    }
+
+    var lines: [String] = []
+    do {
+      lines = try JSONDecoder().decode([String].self, from: fileData)
+    } catch {
+      fatalError("Failed to JSONDecoder Data from \(inputFileURL.path) in [String].self")
+    }
+    
     for packagePath in lines {
-      print("packagePath:", packagePath)
-      let folder = try Folder(path: packagePath)
-      let (f, ti) = try getImportsFromTarget(folder)
-      let parsedPackage = try getTargetOutputFrom(f, ti, sourceCodeFolder)
+      if FileManager.default.fileExists(atPath: packagePath) == false {
+        print("❌ \(packagePath) not found")
+        continue
+      }
+
+      var folder: Folder
+      do {
+        folder = try Folder(path: packagePath)
+      } catch {
+        fatalError("Failed to create Folder with \(packagePath)")
+      }
+
+      let (f, ti) = getImportsFromTarget(folder)
+      let parsedPackage = getTargetOutputFrom(f, ti, sourceCodeFolder)
       parsedPackages.append(parsedPackage)
     }
     return parsedPackages
@@ -38,7 +68,7 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
     return folder.subfolders.recursive.filter {  $0.name == "Resources" }.first
   }
   
-  func getTargetOutputFrom(_ packageFolder: Folder, _ imports: [String], _ rootFolder : Folder) throws -> ParsedPackage {
+  func getTargetOutputFrom(_ packageFolder: Folder, _ imports: [String], _ rootFolder : Folder) -> ParsedPackage {
     let hasR = hasRessources(packageFolder)
     return ParsedPackage(
       name: packageFolder.name,
@@ -49,23 +79,40 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
     )
   }
   
-  func getImportsFromTarget(_ folder: Folder) throws -> (Folder, [String]) {
-    return (folder, try folder.files.recursive.flatMap(getImportsFromFile).unique())
+  func getImportsFromTarget(_ folder: Folder) -> (Folder, [String]) {
+    return (folder, folder.files.recursive.flatMap(getImportsFromFile).unique())
   }
   
-  func getImportsFromFile(_ file: File) throws -> [String] {
-    let syntaxTree = try SyntaxParser.parse(file.url, diagnosticEngine: .none)
-    let visitor = GetImportVisitor()
-    _ = visitor.visit(syntaxTree)
-    return visitor.drain()
+  func getImportsFromFile(_ file: File) -> [String] {
+    do {
+      let syntaxTree = try SyntaxParser.parse(file.url, diagnosticEngine: .none)
+      let visitor = GetImportVisitor()
+      _ = visitor.visit(syntaxTree)
+      return visitor.drain()
+    } catch {
+      print("💥 Failed to extract imports from \(file)")
+    }
+    return []
   }
   
   mutating func run() async throws {
-    let parsedPackages = try await generateParsedPackages()
+    let parsedPackages = await generateParsedPackages()
     let encoder = JSONEncoder()
-    encoder.outputFormatting = .prettyPrinted
-    let data = try encoder.encode(parsedPackages)
-    try data.write(to: outputFileURL, options: [.atomic])
+    if verbose { encoder.outputFormatting = .prettyPrinted }
+
+    var data: Data
+    do {
+      data = try encoder.encode(parsedPackages)
+    } catch {
+      fatalError("Failed to encode parsedPackages")
+    }
+
+    do {
+      try data.write(to: outputFileURL, options: [.atomic])
+    } catch {
+      fatalError("Failed to write parsedPackages in \(outputFileURL.path)")
+    }
+    print("package-generator-cli has finished")
   }
 }
 
