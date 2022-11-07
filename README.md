@@ -16,3 +16,11 @@ OPTIONS:
   --verbose
   -h, --help              Show help information.
 ```
+
+## Release process
+
+Create a Github release 
+Publish Github release
+Run the `./build.sh` to create the artifactbundle 
+Upload the `artifactbundle` to the corresponding release page 
+Update [checksum](https://github.com/mackoj/PackageGeneratorPlugin/blob/2d2eb7e7c63a898bd71b14de8cd5acaab36eb7d2/Package.swift#L18) in https://github.com/mackoj/PackageGeneratorPlugin.
