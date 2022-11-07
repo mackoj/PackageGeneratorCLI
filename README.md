@@ -4,6 +4,8 @@ Package Generator CLI is tool used by a [Package Generator](https://github.com/m
 
 You should not install this or use this directly since it's part of [Package Generator](https://github.com/mackoj/PackageGeneratorPlugin) that you should use instead.
 
+This only support Apple Silicon computer.
+
 ## Usage
 
 ```
