@@ -8,7 +8,7 @@
         {
           "path": "arm64-apple-macosx/bin/package-generator-cli",
           "supportedTriples": ["arm64-apple-macosx"]
-        },
+        }
       ]
     }
   }
