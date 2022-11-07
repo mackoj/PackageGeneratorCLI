@@ -34,6 +34,6 @@ swift package compute-checksum $CLI.artifactbundle.zip
 
 echo "Cleaning"
 rm -rf $CLI.artifactbundle
-rm -rf "$TMPRELEASEFOLDER"
-
+cp $CLI.artifactbundle.zip "$SOURCEFOLDER/$CLI.artifactbundle.zip"
 cd "$SOURCEFOLDER" || exit
+rm -rf "$TMPRELEASEFOLDER"
