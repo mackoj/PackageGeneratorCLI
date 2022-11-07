@@ -4,11 +4,17 @@ CLI="package-generator-cli"
 INFOJSONPATH="$CLI.artifactbundle/info.json"
 CLIBINPATH="$CLI.artifactbundle/arm64-apple-macosx/bin"
 TMPPATH=$(mktemp)
+TMPRELEASEFOLDER=$(mktemp -d)
+TMPRELEASEPROJECT=$TMPRELEASEFOLDER/PackageGeneratorCLI
 TAG=$(curl -s "https://api.github.com/repos/mackoj/PackageGeneratorCLI/tags" | jq --compact-output --raw-output '.[0].name ')
+SOURCEFOLDER=$(pwd)
 
+cd "$TMPRELEASEFOLDER" || exit
+git clone --depth 1 --branch "$TAG"  https://github.com/mackoj/PackageGeneratorCLI.git
+cd "$TMPRELEASEPROJECT" || exit
 
 echo "Building $TAG"
-git checkout $TAG
+git checkout "$TAG"
 
 echo "Building $TAG"
 swift build -c release
@@ -28,3 +34,6 @@ swift package compute-checksum $CLI.artifactbundle.zip
 
 echo "Cleaning"
 rm -rf $CLI.artifactbundle
+rm -rf "$TMPRELEASEFOLDER"
+
+cd "$SOURCEFOLDER" || exit
