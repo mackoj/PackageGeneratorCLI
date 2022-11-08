@@ -6,8 +6,7 @@ CLI="package-generator-cli"
 INFOJSONPATH="$CLI.artifactbundle/info.json"
 TMPPATH=$(mktemp)
 TMPRELEASEFOLDER=$(mktemp -d)
-TMPRELEASEPROJECT=$TMPRELEASEFOLDER/PackageGeneratorCLI
-TAG=$(curl -s "https://api.github.com/repos/mackoj/PackageGeneratorCLI/tags" | jq --compact-output --raw-output '.[0].name ')
+REPO="mackoj/PackageGeneratorCLI"
 SOURCEFOLDER=$(pwd)
 
 if [[ $(uname -m) == "x86_64" ]]; then
@@ -16,11 +15,16 @@ else
 	TRIPLE="arm64-apple-macosx"
 fi
 
+TMPRELEASEPROJECT=$TMPRELEASEFOLDER/PackageGeneratorCLI
+TAG=$(curl -s "https://api.github.com/repos/$REPO/tags" | jq --compact-output --raw-output '.[0].name ')
 CLIBINPATH="$CLI.artifactbundle/$TRIPLE/bin"
 ZIPOUTPUT=$CLI-$TRIPLE.artifactbundle.zip
 
+# generation
+############
+echo "Cloning $REPO @ $TAG"
 cd "$TMPRELEASEFOLDER" || exit
-git clone --depth 1 --branch "$TAG"  https://github.com/mackoj/PackageGeneratorCLI.git
+git clone --depth 1 --branch "$TAG"  https://github.com/$REPO.git
 cd "$TMPRELEASEPROJECT" || exit
 
 echo "Building $TAG"
@@ -38,7 +42,7 @@ echo "Updating Artifactbundle Info.json"
 jq '.artifacts."package-generator-cli".version = "'"$TAG"'"' "$INFOJSONPATH" > "$TMPPATH"
 mv "$TMPPATH" "$INFOJSONPATH"
 
-jq '.artifacts."package-generator-cli".variants += [{ "path": ""'"$TRIPLE"'"/bin/package-generator-cli", "supportedTriples": [""'"$TRIPLE"'""] }] ' "$INFOJSONPATH" > "$TMPPATH"
+jq '.artifacts."package-generator-cli".variants += [{ "path": "'"$TRIPLE"'/bin/package-generator-cli", "supportedTriples": ["'"$TRIPLE"'"] }] ' "$INFOJSONPATH" > "$TMPPATH"
 mv "$TMPPATH" "$INFOJSONPATH"
 
 echo "Zip Artifactbundle"
