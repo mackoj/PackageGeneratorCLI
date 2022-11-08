@@ -47,12 +47,12 @@ mv "$TMPPATH" "$INFOJSONPATH"
 
 echo "Zip Artifactbundle"
 zip -r $ZIPOUTPUT $CLI.artifactbundle -x ".*" -x "__MACOSX"
-
-echo "Compute Checksum"
-swift package compute-checksum $ZIPOUTPUT
+cp $ZIPOUTPUT "$SOURCEFOLDER/$ZIPOUTPUT"
 
 echo "Cleaning"
 rm -rf $CLI.artifactbundle
-cp $CLI.artifactbundle.zip "$SOURCEFOLDER/$CLI.artifactbundle.zip"
 cd "$SOURCEFOLDER" || exit
 rm -rf "$TMPRELEASEFOLDER"
+
+echo "Compute Checksum"
+swift package compute-checksum $ZIPOUTPUT
