@@ -2,6 +2,8 @@ import Foundation
 import Files
 import ArgumentParser
 import SwiftSyntax
+import SwiftParser
+import PackageGeneratorModels
 
 @main
 struct PackageGeneratorCLI: AsyncParsableCommand {
@@ -37,28 +39,28 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
       fatalError("Failed to create Data from \(inputFileURL.path)")
     }
 
-    var lines: [String] = []
+    var lines: [PackageInformation] = []
     do {
-      lines = try JSONDecoder().decode([String].self, from: fileData)
+      lines = try JSONDecoder().decode([PackageInformation].self, from: fileData)
     } catch {
-      fatalError("Failed to JSONDecoder Data from \(inputFileURL.path) in [String].self")
+      fatalError("Failed to JSONDecoder Data from \(inputFileURL.path) in [PackageInformation].self")
     }
     
     for packagePath in lines {
-      if FileManager.default.fileExists(atPath: packagePath) == false {
+      if FileManager.default.fileExists(atPath: packagePath.target.path) == false {
         print("❌ \(packagePath) not found")
         continue
       }
 
       var folder: Folder
       do {
-        folder = try Folder(path: packagePath)
+        folder = try Folder(path: packagePath.target.path)
       } catch {
         fatalError("Failed to create Folder with \(packagePath)")
       }
 
       let (f, ti) = getImportsFromTarget(folder)
-      let parsedPackage = getTargetOutputFrom(f, ti, sourceCodeFolder)
+      let parsedPackage = getTargetOutputFrom(packagePath, f, ti, sourceCodeFolder)
       parsedPackages.append(parsedPackage)
     }
     return parsedPackages
@@ -68,10 +70,11 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
     return folder.subfolders.recursive.filter {  $0.name == "Resources" }.first
   }
   
-  func getTargetOutputFrom(_ packageFolder: Folder, _ imports: [String], _ rootFolder : Folder) -> ParsedPackage {
+  func getTargetOutputFrom(_ packageInfo: PackageInformation, _ packageFolder: Folder, _ imports: [String], _ rootFolder : Folder) -> ParsedPackage {
     let hasR = hasRessources(packageFolder)
     return ParsedPackage(
-      name: packageFolder.name,
+      name: packageInfo.target.name,
+      test: packageInfo.test,
       dependencies: imports,
       path: packageFolder.path(relativeTo: rootFolder),
       fullPath: packageFolder.path,
@@ -85,10 +88,16 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
   
   func getImportsFromFile(_ file: File) -> [String] {
     do {
-      let syntaxTree = try SyntaxParser.parse(file.url, diagnosticEngine: .none)
+      let source = try String(contentsOf: file.url, encoding: .utf8)
+      let sourceFile = Parser.parse(source: source)
       let visitor = GetImportVisitor()
-      _ = visitor.visit(syntaxTree)
+      _ = visitor.visit(sourceFile)
       return visitor.drain()
+
+//      let syntaxTree = try SyntaxParser.parse(file.url, diagnosticEngine: .none)
+//      let visitor = GetImportVisitor()
+//      _ = visitor.visit(syntaxTree)
+//      return visitor.drain()
     } catch {
       print("💥 Failed to extract imports from \(file)")
     }
