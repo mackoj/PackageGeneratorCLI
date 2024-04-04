@@ -1,0 +1,44 @@
+[
+  {
+    "target": {
+      "path" : "/Users/mac-JMACKO01/Developer/vitamin-play-apple-2/Sources/Fonts",
+      "name" : "Fonts",
+    }
+  },
+  {
+    "target": {
+      "path" : "/Users/mac-JMACKO01/Developer/vitamin-play-apple-2/Sources/Tokens",
+      "name" : "Tokens",
+    }
+  },
+  {
+    "test": {
+      "path" : "Tests/Colors",
+      "name" : "ColorsTests",
+    },
+    "target": {
+      "path" : "/Users/mac-JMACKO01/Developer/vitamin-play-apple-2/Sources/Colors",
+      "name" : "Colors",
+    }
+  },
+  {
+    "test": {
+      "path" : "Tests/Components/IconButton",
+      "name" : "IconButtonTests",
+    },
+    "target": {
+      "path" : "/Users/mac-JMACKO01/Developer/vitamin-play-apple-2/Sources/Components/IconButton",
+      "name" : "IconButton",
+    }
+  },
+  {
+    "test": {
+      "path" : "Tests/VitaminPlay",
+      "name" : "VitaminPlayTests",
+    },
+    "target": {
+      "path" : "/Users/mac-JMACKO01/Developer/vitamin-play-apple-2/Sources/VitaminPlay",
+      "name" : "VitaminPlay",
+    }
+  }
+]

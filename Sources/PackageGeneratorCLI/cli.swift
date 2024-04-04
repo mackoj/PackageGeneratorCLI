@@ -87,17 +87,13 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
   }
   
   func getImportsFromFile(_ file: File) -> [String] {
+    if file.extension != "swift" { return [] }
     do {
       let source = try String(contentsOf: file.url, encoding: .utf8)
       let sourceFile = Parser.parse(source: source)
-      let visitor = GetImportVisitor()
+      let visitor = GetImportVisitor(viewMode: SyntaxTreeViewMode.all)
       _ = visitor.visit(sourceFile)
       return visitor.drain()
-
-//      let syntaxTree = try SyntaxParser.parse(file.url, diagnosticEngine: .none)
-//      let visitor = GetImportVisitor()
-//      _ = visitor.visit(syntaxTree)
-//      return visitor.drain()
     } catch {
       print("💥 Failed to extract imports from \(file)")
     }
