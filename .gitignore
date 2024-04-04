@@ -10,3 +10,4 @@ DerivedData/
 Package_generated.swift
 package-generator-cli.artifactbundle/
 xcuserdata/
+.swiftpm/
