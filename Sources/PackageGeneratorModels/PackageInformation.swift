@@ -2,7 +2,7 @@ import Foundation
 
 public struct PackageInformation: Codable {
   public struct PathInfo: Codable {
-    public let path: URL
+    public let path: String
     public let name: String
   }
   public let test: PathInfo?
@@ -11,8 +11,9 @@ public struct PackageInformation: Codable {
   public init(from decoder: any Decoder) throws {
     // Legacy Parser
     let stringContainer = try decoder.singleValueContainer()
-    if let path = try? stringContainer.decode(URL.self) {
-      self.target = PathInfo(path: path, name: path.lastPathComponent)
+    if let pathString = try? stringContainer.decode(String.self) {
+      let path = URL(fileURLWithPath: pathString)
+      self.target = PathInfo(path: pathString, name: path.lastPathComponent)
       self.test = nil
       return
     }

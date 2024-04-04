@@ -47,14 +47,14 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
     }
     
     for packagePath in lines {
-      if FileManager.default.fileExists(atPath: packagePath.target.path.absoluteString) == false {
+      if FileManager.default.fileExists(atPath: packagePath.target.path) == false {
         print("❌ \(packagePath) not found")
         continue
       }
 
       var folder: Folder
       do {
-        folder = try Folder(path: packagePath.target.path.absoluteString)
+        folder = try Folder(path: packagePath.target.path)
       } catch {
         fatalError("Failed to create Folder with \(packagePath)")
       }
