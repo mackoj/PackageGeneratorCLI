@@ -52,16 +52,27 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
         continue
       }
 
-      var folder: Folder
       do {
-        folder = try Folder(path: packagePath.target.path)
+        var folder = try Folder(path: packagePath.target.path)
+        print("‼️ target.path:", folder.path)
+        let (f, ti) = getImportsFromTarget(folder)
+        let parsedPackage = getTargetOutputFrom(packagePath, f, ti, sourceCodeFolder)
+        parsedPackages.append(parsedPackage)
       } catch {
         fatalError("Failed to create Folder with \(packagePath)")
       }
-      print("‼️ folder:", folder.path)
-      let (f, ti) = getImportsFromTarget(folder)
-      let parsedPackage = getTargetOutputFrom(packagePath, f, ti, sourceCodeFolder)
-      parsedPackages.append(parsedPackage)
+
+      if let testPath = packagePath.test?.path {
+        do {
+          var folder = try Folder(path: testPath)
+          print("‼️ test.path:", folder.path)
+          let (f, ti) = getImportsFromTarget(folder)
+          let parsedPackage = getTargetOutputFrom(packagePath, f, ti, sourceCodeFolder)
+          parsedPackages.append(parsedPackage)
+        } catch {
+          fatalError("Failed to create Folder with \(packagePath)")
+        }
+      }
     }
     return parsedPackages
   }
