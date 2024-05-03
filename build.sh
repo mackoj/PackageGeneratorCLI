@@ -16,8 +16,8 @@ else
 fi
 
 TMPRELEASEPROJECT=$TMPRELEASEFOLDER/PackageGeneratorCLI
-TAG=$(curl -s "https://api.github.com/repos/$REPO/tags" | jq --compact-output --raw-output '.[0].name ')
-# TAG="feat/testTargetImports"
+# TAG=$(curl -s "https://api.github.com/repos/$REPO/tags" | jq --compact-output --raw-output '.[0].name ')
+TAG="main"
 CLIBINPATH="$CLI.artifactbundle/$TRIPLE/bin"
 ZIPOUTPUT=$CLI-$TRIPLE.artifactbundle.zip
 
