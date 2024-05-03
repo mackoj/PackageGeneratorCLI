@@ -58,6 +58,14 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
         let (targetFolder, targetImport) = getImportsFromTarget(folder)
         let parsedPackage = getTargetOutputFrom(packagePath, targetFolder, targetImport, sourceCodeFolder)
         parsedPackages.append(parsedPackage)
+        
+        if let testPath = packagePath.test?.path {
+          let testPathFolder = try Folder(path: testPath)
+          print("‼️ test?.path:", testPathFolder.path)
+          let (testFolder, testImport) = getImportsFromTarget(testPathFolder)
+          parsedPackages.append(getTargetOutputFrom(packagePath, testFolder, testImport, sourceCodeFolder))
+        }
+        
       } catch {
         fatalError("Failed to create Folder with \(packagePath)")
       }
