@@ -1,0 +1,67 @@
+[
+  {
+    "localDependencies" : 0,
+    "hasBiggestNumberOfDependencies" : false,
+    "fullPath" : "\/Users\/mac-JMACKO01\/Developer\/vitamin-play-apple-2\/Sources\/Fonts\/",
+    "name" : "Fonts",
+    "dependencies" : [
+
+    ],
+    "resources" : "Resources",
+    "path" : "Sources\/Fonts"
+  },
+  {
+    "path" : "Sources\/Tokens",
+    "name" : "Tokens",
+    "fullPath" : "\/Users\/mac-JMACKO01\/Developer\/vitamin-play-apple-2\/Sources\/Tokens\/",
+    "localDependencies" : 0,
+    "dependencies" : [
+      "Foundation",
+      "SwiftUI",
+      "Colors"
+    ],
+    "hasBiggestNumberOfDependencies" : false
+  },
+  {
+    "fullPath" : "\/Users\/mac-JMACKO01\/Developer\/vitamin-play-apple-2\/Sources\/Colors\/",
+    "path" : "Sources\/Colors",
+    "test" : {
+      "name" : "ColorsTests",
+      "path" : "Tests\/Colors"
+    },
+    "localDependencies" : 0,
+    "name" : "Colors",
+    "dependencies" : [
+      "Foundation"
+    ],
+    "hasBiggestNumberOfDependencies" : false
+  },
+  {
+    "fullPath" : "\/Users\/mac-JMACKO01\/Developer\/vitamin-play-apple-2\/Sources\/Components\/IconButton\/",
+    "hasBiggestNumberOfDependencies" : false,
+    "localDependencies" : 0,
+    "path" : "Sources\/Components\/IconButton",
+    "name" : "IconButton",
+    "test" : {
+      "path" : "Tests\/Components\/IconButton",
+      "name" : "IconButtonTests"
+    },
+    "dependencies" : [
+
+    ]
+  },
+  {
+    "name" : "VitaminPlay",
+    "hasBiggestNumberOfDependencies" : false,
+    "test" : {
+      "path" : "Tests\/VitaminPlay",
+      "name" : "VitaminPlayTests"
+    },
+    "fullPath" : "\/Users\/mac-JMACKO01\/Developer\/vitamin-play-apple-2\/Sources\/VitaminPlay\/",
+    "localDependencies" : 0,
+    "dependencies" : [
+
+    ],
+    "path" : "Sources\/VitaminPlay"
+  }
+]
