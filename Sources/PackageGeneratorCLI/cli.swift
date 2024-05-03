@@ -56,14 +56,14 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
         let folder = try Folder(path: packagePath.target.path)
         print("‼️ target.path:", folder.path)
         let (targetFolder, targetImport) = getImportsFromTarget(folder)
-        let parsedPackage = getTargetOutputFrom(packagePath, targetFolder, targetImport, sourceCodeFolder)
+        let parsedPackage = getTargetOutputFrom(packagePath, false, targetFolder, targetImport, sourceCodeFolder)
         parsedPackages.append(parsedPackage)
         
         if let testPath = packagePath.test?.path {
           let testPathFolder = try Folder(path: testPath)
           print("‼️ test?.path:", testPathFolder.path)
           let (testFolder, testImport) = getImportsFromTarget(testPathFolder)
-          parsedPackages.append(getTargetOutputFrom(packagePath, testFolder, testImport, sourceCodeFolder))
+          parsedPackages.append(getTargetOutputFrom(packagePath, true, testFolder, testImport, sourceCodeFolder))
         }
         
       } catch {
@@ -77,11 +77,11 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
     return folder.subfolders.recursive.filter {  $0.name == "Resources" }.first
   }
   
-  func getTargetOutputFrom(_ packageInfo: PackageInformation, _ packageFolder: Folder, _ dependencies: [String], _ rootFolder : Folder) -> ParsedPackage {
+  func getTargetOutputFrom(_ packageInfo: PackageInformation, _ isTest: Bool, _ packageFolder: Folder, _ dependencies: [String], _ rootFolder : Folder) -> ParsedPackage {
     let hasR = hasRessources(packageFolder)
     return ParsedPackage(
       name: packageInfo.target.name,
-      isTest: packageInfo.test != nil,
+      isTest: isTest,
       dependencies: dependencies,
       path: packageFolder.path(relativeTo: rootFolder),
       fullPath: packageFolder.path,
