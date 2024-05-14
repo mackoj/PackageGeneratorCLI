@@ -94,7 +94,9 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
   }
   
   func getImportsFromFile(_ file: File) -> [String] {
-    if file.extension != "swift" { return [] }
+    guard file.extension == "swift" else { return [] }
+    guard !file.url.path.contains("docc") else { return [] }
+
     do {
       let source = try String(contentsOf: file.url, encoding: .utf8)
       let sourceFile = Parser.parse(source: source)
