@@ -56,16 +56,63 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
         let folder = try Folder(path: packagePath.target.path)
         print("‼️ target.path:", folder.path)
         let (targetFolder, targetImport) = getImportsFromTarget(folder)
-        let parsedPackage = getTargetOutputFrom(packagePath, false, targetFolder, targetImport, sourceCodeFolder)
+        let parsedPackage = getTargetOutputFrom(
+          packagePath,
+          .product,
+          targetFolder,
+          targetImport,
+          sourceCodeFolder
+        )
         parsedPackages.append(parsedPackage)
         
+        if let binPath = packagePath.bin?.path {
+          let binPathFolder = try Folder(path: binPath)
+          print("‼️ bin?.path:", binPathFolder.path)
+          let (binFolder, binImport) = getImportsFromTarget(binPathFolder)
+          parsedPackages
+            .append(
+              getTargetOutputFrom(
+                packagePath,
+                .bin,
+                binFolder,
+                binImport,
+                sourceCodeFolder
+              )
+            )
+        }
+
         if let testPath = packagePath.test?.path {
           let testPathFolder = try Folder(path: testPath)
           print("‼️ test?.path:", testPathFolder.path)
           let (testFolder, testImport) = getImportsFromTarget(testPathFolder)
-          parsedPackages.append(getTargetOutputFrom(packagePath, true, testFolder, testImport, sourceCodeFolder))
+          parsedPackages
+            .append(
+              getTargetOutputFrom(
+                packagePath,
+                .test,
+                testFolder,
+                testImport,
+                sourceCodeFolder
+              )
+            )
         }
-        
+
+        if let testPath = packagePath.test?.path {
+          let testPathFolder = try Folder(path: testPath)
+          print("‼️ test?.path:", testPathFolder.path)
+          let (testFolder, testImport) = getImportsFromTarget(testPathFolder)
+          parsedPackages
+            .append(
+              getTargetOutputFrom(
+                packagePath,
+                .test,
+                testFolder,
+                testImport,
+                sourceCodeFolder
+              )
+            )
+        }
+
       } catch {
         fatalError("Failed to create Folder with \(packagePath)")
       }
@@ -77,15 +124,15 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
     return folder.subfolders.recursive.filter {  $0.name == "Resources" }.first
   }
   
-  func getTargetOutputFrom(_ packageInfo: PackageInformation, _ isTest: Bool, _ packageFolder: Folder, _ dependencies: [String], _ rootFolder : Folder) -> ParsedPackage {
+  func getTargetOutputFrom(_ packageInfo: PackageInformation, _ target: ParsedPackage.Target, _ packageFolder: Folder, _ dependencies: [String], _ rootFolder : Folder) -> ParsedPackage {
     let hasR = hasRessources(packageFolder)
     return ParsedPackage(
       name: packageInfo.target.name,
-      isTest: isTest,
       dependencies: dependencies,
       path: packageFolder.path(relativeTo: rootFolder),
       fullPath: packageFolder.path,
-      resources: hasR != nil ? hasR?.path(relativeTo: packageFolder) : nil
+      resources: hasR != nil ? hasR?.path(relativeTo: packageFolder) : nil,
+      target: target
     )
   }
   

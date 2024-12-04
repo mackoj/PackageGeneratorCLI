@@ -6,6 +6,7 @@ public struct PackageInformation: Codable {
     public let name: String
   }
   public let test: PathInfo?
+  public let bin: PathInfo?
   public let target: PathInfo
   
   public init(from decoder: any Decoder) throws {
@@ -15,11 +16,13 @@ public struct PackageInformation: Codable {
       let path = URL(fileURLWithPath: pathString)
       self.target = PathInfo(path: pathString, name: path.lastPathComponent)
       self.test = nil
+      self.bin = nil
       return
     }
     
     let container = try decoder.container(keyedBy: CodingKeys.self)
     self.test = try container.decodeIfPresent(PackageInformation.PathInfo.self, forKey: .test)
     self.target = try container.decode(PackageInformation.PathInfo.self, forKey: .target)
+    self.bin = try container.decodeIfPresent(PackageInformation.PathInfo.self, forKey: .test)
   }
 }
