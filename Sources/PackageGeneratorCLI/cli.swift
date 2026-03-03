@@ -54,15 +54,17 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
 
       do {
         let folder = try Folder(path: packagePath.target.path)
-        print("‼️ target.path:", folder.path)
-        let (targetFolder, targetImport) = getImportsFromTarget(folder)
+        let targetModuleName = moduleName(for: packagePath, isTest: false)
+        logInfo("Processing target module \"\(targetModuleName)\" at \(folder.path)")
+        let (targetFolder, targetImport) = getImportsFromTarget(folder, targetModuleName: targetModuleName)
         let parsedPackage = getTargetOutputFrom(packagePath, false, targetFolder, targetImport, sourceCodeFolder)
         parsedPackages.append(parsedPackage)
         
         if let testPath = packagePath.test?.path {
           let testPathFolder = try Folder(path: testPath)
-          print("‼️ test?.path:", testPathFolder.path)
-          let (testFolder, testImport) = getImportsFromTarget(testPathFolder)
+          let testModuleName = moduleName(for: packagePath, isTest: true)
+          logInfo("Processing test module \"\(testModuleName)\" at \(testPathFolder.path)")
+          let (testFolder, testImport) = getImportsFromTarget(testPathFolder, targetModuleName: testModuleName)
           parsedPackages.append(getTargetOutputFrom(packagePath, true, testFolder, testImport, sourceCodeFolder))
         }
         
@@ -89,11 +91,11 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
     )
   }
   
-  func getImportsFromTarget(_ folder: Folder) -> (Folder, [String]) {
-    return (folder, folder.files.recursive.flatMap(getImportsFromFile).unique())
+  func getImportsFromTarget(_ folder: Folder, targetModuleName: String) -> (Folder, [String]) {
+    return (folder, folder.files.recursive.flatMap { getImportsFromFile($0, targetModuleName: targetModuleName) }.unique())
   }
   
-  func getImportsFromFile(_ file: File) -> [String] {
+  func getImportsFromFile(_ file: File, targetModuleName: String) -> [String] {
     guard file.extension == "swift" else { return [] }
     guard !file.url.path.contains("docc") else { return [] }
 
@@ -102,9 +104,14 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
       let sourceFile = Parser.parse(source: source)
       let visitor = GetImportVisitor(viewMode: SyntaxTreeViewMode.all)
       _ = visitor.visit(sourceFile)
-      return visitor.drain()
+      let imports = visitor.drain()
+      let filteredImports = imports.filter { $0 != targetModuleName }
+      if imports.count != filteredImports.count {
+        logWarning("Filtered self-import \"\(targetModuleName)\" from \(file.path)")
+      }
+      return filteredImports
     } catch {
-      print("💥 Failed to extract imports from \(file)")
+      logWarning("Failed to extract imports from \(file.path): \(error.localizedDescription)")
     }
     return []
   }
@@ -126,8 +133,23 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
     } catch {
       fatalError("Failed to write parsedPackages in \(outputFileURL.path)")
     }
-    print("package-generator-cli has finished")
+    logInfo("package-generator-cli has finished")
   }
+}
+
+extension PackageGeneratorCLI {
+  private func moduleName(for packageInfo: PackageInformation, isTest: Bool) -> String {
+    return "\(packageInfo.target.name)\(isTest ? "Tests" : "")"
+  }
+
+  private func logInfo(_ message: String) {
+    print("[package-generator-cli] \(message)")
+  }
+
+  private func logWarning(_ message: String) {
+    print("[package-generator-cli WARNING] \(message)")
+  }
+
 }
 
 extension Sequence where Iterator.Element: Hashable {
