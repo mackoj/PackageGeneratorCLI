@@ -8,6 +8,9 @@ TMPPATH=$(mktemp)
 TMPRELEASEFOLDER=$(mktemp -d)
 REPO="mackoj/PackageGeneratorCLI"
 SOURCEFOLDER=$(pwd)
+TAG_ARG="${1:-main}"
+TAG="${TAG_ARG#refs/tags/}"
+TAG_VERSION="${TAG#v}"
 
 if [[ $(uname -m) == "x86_64" ]]; then
 	TRIPLE="x86_64-apple-macosx"
@@ -17,7 +20,6 @@ fi
 
 TMPRELEASEPROJECT=$TMPRELEASEFOLDER/PackageGeneratorCLI
 # TAG=$(curl -s "https://api.github.com/repos/$REPO/tags" | jq --compact-output --raw-output '.[0].name ')
-TAG="main"
 CLIBINPATH="$CLI.artifactbundle/$TRIPLE/bin"
 ZIPOUTPUT=$CLI-$TRIPLE.artifactbundle.zip
 
@@ -40,7 +42,7 @@ cp -f .build/release/$CLI $CLIBINPATH
 cp info.json "$INFOJSONPATH"
 
 echo "Updating Artifactbundle Info.json"
-jq '.artifacts."package-generator-cli".version = "'"$TAG"'"' "$INFOJSONPATH" > "$TMPPATH"
+jq '.artifacts."package-generator-cli".version = "'"$TAG_VERSION"'"' "$INFOJSONPATH" > "$TMPPATH"
 mv "$TMPPATH" "$INFOJSONPATH"
 
 jq '.artifacts."package-generator-cli".variants += [{ "path": "'"$TRIPLE"'/bin/package-generator-cli", "supportedTriples": ["'"$TRIPLE"'"] }] ' "$INFOJSONPATH" > "$TMPPATH"

@@ -24,8 +24,5 @@ OPTIONS:
 
 ## Release process
 
-- Create a Github release 
-- Publish Github release
-- Run the `./build.sh` to create the artifactbundle 
-- Upload the `artifactbundle` to the corresponding release page 
-- Update [checksum](https://github.com/mackoj/PackageGeneratorPlugin/blob/2d2eb7e7c63a898bd71b14de8cd5acaab36eb7d2/Package.swift#L18) in https://github.com/mackoj/PackageGeneratorPlugin
+- Create and publish a GitHub release for the desired tag; once it is published, the `Publish release artifact` workflow automatically runs `./build.sh` for that tag, builds the executable bundle, and uploads the `package-generator-cli-*-apple-macosx.artifactbundle.zip` asset to the release.
+- The workflow also prints the `swift package compute-checksum` result for the generated bundle; copy that checksum into PackageGeneratorPlugin's `Package.swift` (see the existing [checksum reference](https://github.com/mackoj/PackageGeneratorPlugin/blob/2d2eb7e7c63a898bd71b14de8cd5acaab36eb7d2/Package.swift#L18)) so the plugin picks up the new artifact.

@@ -1,0 +1,40 @@
+name: Publish release artifact
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: macos-14
+    env:
+      RELEASE_TAG: ${{ github.event.release.tag_name }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Swift
+        uses: actions/setup-swift@v2
+        with:
+          swift-version: '5.9'
+      - name: Build release artifact
+        run: ./build.sh "${{ env.RELEASE_TAG }}"
+      - name: Locate artifact and compute checksum
+        id: artifact
+        run: |
+          ARTIFACT=$(ls package-generator-cli-*.zip)
+          echo "artifact=$ARTIFACT" >> "$GITHUB_OUTPUT"
+          CHECKSUM=$(swift package compute-checksum "$ARTIFACT" | awk '{print $1}')
+          echo "checksum=$CHECKSUM" >> "$GITHUB_OUTPUT"
+      - name: Upload bundle to release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ steps.artifact.outputs.artifact }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Document plugin checksum
+        run: |
+          echo "Release checksum: ${{ steps.artifact.outputs.checksum }}"
+          echo "Copy that value into PackageGeneratorPlugin's manifest after the release."
