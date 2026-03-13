@@ -56,7 +56,12 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
         let folder = try Folder(path: packagePath.target.path)
         let targetModuleName = moduleName(for: packagePath, isTest: false)
         logInfo("Processing target module \"\(targetModuleName)\" at \(folder.path)")
-        let (targetFolder, targetImport) = getImportsFromTarget(folder, targetModuleName: targetModuleName)
+        let (targetFolder, targetImport) = getImportsFromTarget(
+          folder,
+          targetModuleName: targetModuleName,
+          packageRoot: sourceCodeFolder,
+          excludes: packagePath.target.exclude
+        )
         let parsedPackage = getTargetOutputFrom(packagePath, false, targetFolder, targetImport, sourceCodeFolder)
         parsedPackages.append(parsedPackage)
         
@@ -64,7 +69,12 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
           let testPathFolder = try Folder(path: testPath)
           let testModuleName = moduleName(for: packagePath, isTest: true)
           logInfo("Processing test module \"\(testModuleName)\" at \(testPathFolder.path)")
-          let (testFolder, testImport) = getImportsFromTarget(testPathFolder, targetModuleName: testModuleName)
+          let (testFolder, testImport) = getImportsFromTarget(
+            testPathFolder,
+            targetModuleName: testModuleName,
+            packageRoot: sourceCodeFolder,
+            excludes: packagePath.test?.exclude
+          )
           parsedPackages.append(getTargetOutputFrom(packagePath, true, testFolder, testImport, sourceCodeFolder))
         }
         
@@ -91,8 +101,68 @@ struct PackageGeneratorCLI: AsyncParsableCommand {
     )
   }
   
-  func getImportsFromTarget(_ folder: Folder, targetModuleName: String) -> (Folder, [String]) {
-    return (folder, folder.files.recursive.flatMap { getImportsFromFile($0, targetModuleName: targetModuleName) }.unique())
+  func getImportsFromTarget(
+    _ folder: Folder,
+    targetModuleName: String,
+    packageRoot: Folder,
+    excludes: [String]?
+  ) -> (Folder, [String]) {
+    let files = folder.files.recursive.filter {
+      !isFileExcluded($0, baseFolder: folder, packageRoot: packageRoot, excludes: excludes)
+    }
+    let imports = files.flatMap { getImportsFromFile($0, targetModuleName: targetModuleName) }.unique()
+    return (folder, imports)
+  }
+
+  private func isFileExcluded(
+    _ file: File,
+    baseFolder: Folder,
+    packageRoot: Folder,
+    excludes: [String]?
+  ) -> Bool {
+    guard let excludes = excludes, excludes.isEmpty == false else { return false }
+    let absolutePath = file.url.standardized.path
+    let relativeToTarget = file.path(relativeTo: baseFolder)
+    let relativeToPackage = file.path(relativeTo: packageRoot)
+    let strippedPackageRelative = strippedRootPrefix(relativeToPackage)
+
+    for raw in excludes {
+      let trimmed = raw.trimmingCharacters(in: .whitespacesAndNewlines)
+      guard trimmed.isEmpty == false else { continue }
+      if trimmed.hasPrefix("/") {
+        let normalized = URL(fileURLWithPath: trimmed).standardized.path
+        if absolutePath == normalized || absolutePath.hasPrefix(normalized + "/") {
+          return true
+        }
+        continue
+      }
+      let cleaned = trimmed.hasSuffix("/") ? String(trimmed.dropLast()) : trimmed
+      if matchesRelative(path: relativeToTarget, candidate: cleaned) {
+        return true
+      }
+      if matchesRelative(path: relativeToPackage, candidate: cleaned) {
+        return true
+      }
+      if matchesRelative(path: strippedPackageRelative, candidate: cleaned) {
+        return true
+      }
+    }
+    return false
+  }
+
+  private func matchesRelative(path: String, candidate: String) -> Bool {
+    guard candidate.isEmpty == false else { return false }
+    return path == candidate || path.hasPrefix(candidate + "/")
+  }
+
+  private func strippedRootPrefix(_ path: String) -> String {
+    if path.hasPrefix("Sources/") {
+      return String(path.dropFirst("Sources/".count))
+    }
+    if path.hasPrefix("Tests/") {
+      return String(path.dropFirst("Tests/".count))
+    }
+    return path
   }
   
   func getImportsFromFile(_ file: File, targetModuleName: String) -> [String] {
