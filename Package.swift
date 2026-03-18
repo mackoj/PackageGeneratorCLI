@@ -1,4 +1,4 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 6.2
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -15,7 +15,7 @@ let package = Package(
   dependencies: [
     .package(url: "https://github.com/JohnSundell/Files.git", from: "4.2.0"),
     .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.1.4"),
-    .package(url: "https://github.com/apple/swift-syntax", "509.0.0"..<"511.0.0"),
+    .package(url: "https://github.com/apple/swift-syntax", "509.0.0"..<"604.0.0"),
   ],
   targets: [
     .target(
@@ -31,5 +31,13 @@ let package = Package(
         .product(name: "ArgumentParser", package: "swift-argument-parser"),
       ]
     ),
+    .testTarget(
+      name: "PackageGeneratorCLITests",
+      dependencies: [
+        "PackageGeneratorCLI",
+        .product(name: "SwiftParser", package: "swift-syntax"),
+        .product(name: "SwiftSyntax", package: "swift-syntax"),
+      ]
+    )
   ]
 )
