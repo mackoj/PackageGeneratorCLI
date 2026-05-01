@@ -12,7 +12,7 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.1.4"),
-    .package(url: "https://github.com/apple/swift-syntax", "509.0.0"..<"604.0.0"),
+    .package(url: "https://github.com/swiftlang/swift-syntax", "509.0.0"..<"605.0.0"),
   ],
   targets: [
     .target(
@@ -25,9 +25,6 @@ let package = Package(
         .product(name: "SwiftParser", package: "swift-syntax"),
         .product(name: "SwiftSyntax", package: "swift-syntax"),
         .product(name: "ArgumentParser", package: "swift-argument-parser"),
-      ],
-      swiftSettings: [
-        .swiftLanguageMode(.v6),
       ]
     ),
     .testTarget(
@@ -38,5 +35,6 @@ let package = Package(
         .product(name: "SwiftSyntax", package: "swift-syntax"),
       ]
     ),
-  ]
+  ],
+  swiftLanguageModes: [.v6],
 )
