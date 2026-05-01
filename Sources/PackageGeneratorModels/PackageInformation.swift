@@ -1,7 +1,7 @@
 import Foundation
 
-public struct PackageInformation: Codable {
-  public struct PathInfo: Codable {
+public struct PackageInformation: Codable, Sendable {
+  public struct PathInfo: Codable, Sendable {
     public let path: String
     public let name: String
     public let exclude: [String]?

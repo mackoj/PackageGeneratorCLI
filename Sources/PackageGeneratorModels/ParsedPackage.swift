@@ -1,6 +1,6 @@
 import Foundation
 
-public struct ParsedPackage: Codable, CustomStringConvertible {
+public struct ParsedPackage: Codable, Sendable, CustomStringConvertible {
   public var name: String
   public var isTest: Bool
   public var dependencies: [String]

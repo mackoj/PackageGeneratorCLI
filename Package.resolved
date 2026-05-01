@@ -1,15 +1,6 @@
 {
-  "originHash" : "95f1be0626c0aac4e1d62d7c753bad22022155433a2a2ba35f4cd57415c3b01b",
+  "originHash" : "baa26c6ee5da82c59fbe37ee6d773091f3b8ab38fe0a7f46828ef639ae0e672f",
   "pins" : [
-    {
-      "identity" : "files",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/JohnSundell/Files",
-      "state" : {
-        "revision" : "d273b5b7025d386feef79ef6bad7de762e106eaf",
-        "version" : "4.2.0"
-      }
-    },
     {
       "identity" : "swift-argument-parser",
       "kind" : "remoteSourceControl",
