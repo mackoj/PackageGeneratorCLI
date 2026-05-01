@@ -1,21 +1,18 @@
 // swift-tools-version: 6.2
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
 import PackageDescription
 
 let package = Package(
   name: "PackageGeneratorCLI",
   platforms: [
-    .macOS(.v12),
+    .macOS(.v13),
   ],
   products: [
     .executable(name: "package-generator-cli", targets: ["PackageGeneratorCLI"]),
-    .library(name: "PackageGeneratorModels", targets: ["PackageGeneratorModels"])
+    .library(name: "PackageGeneratorModels", targets: ["PackageGeneratorModels"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/JohnSundell/Files.git", from: "4.2.0"),
     .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.1.4"),
-    .package(url: "https://github.com/apple/swift-syntax", "509.0.0"..<"604.0.0"),
+    .package(url: "https://github.com/swiftlang/swift-syntax", "509.0.0"..<"605.0.0"),
   ],
   targets: [
     .target(
@@ -24,7 +21,6 @@ let package = Package(
     .executableTarget(
       name: "PackageGeneratorCLI",
       dependencies: [
-        "Files",
         "PackageGeneratorModels",
         .product(name: "SwiftParser", package: "swift-syntax"),
         .product(name: "SwiftSyntax", package: "swift-syntax"),
@@ -38,6 +34,7 @@ let package = Package(
         .product(name: "SwiftParser", package: "swift-syntax"),
         .product(name: "SwiftSyntax", package: "swift-syntax"),
       ]
-    )
-  ]
+    ),
+  ],
+  swiftLanguageModes: [.v6],
 )
