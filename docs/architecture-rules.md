@@ -176,3 +176,27 @@ Good:
 @Test func parsesConditionalImports() {
 withKnownIssue("#if imports are not evaluated (mackoj/PackageGeneratorCLI#N)") { … }
 ```
+
+## performance
+
+The scan path. Read before you parse Swift or walk a syntax tree.
+
+### Only `SwiftFileParser` calls `Parser.parse`, and nothing in `Sources` subclasses `SyntaxRewriter`.
+
+`parsing-goes-through-the-import-region`: Parsing whole files was over 90% of a scan's time and allocations. `SwiftFileParser.imports(inSource:)` parses only the leading part of a file that can hold imports (`ImportRegion`), which made scans about 25 times faster (docs/performance.md, "What has paid off"). A second `Parser.parse` call site, or a `SyntaxRewriter` that walks and rebuilds every node, brings that cost back.
+
+**How to fix:** Call `SwiftFileParser.imports(inSource:)` or `SwiftFileParser().parse(file:targetModuleName:)`. To read the tree, subclass `SyntaxVisitor` and return `.skipChildren` from nodes whose inside you do not need.
+
+Bad:
+
+```swift
+let tree = Parser.parse(source: try String(contentsOf: file, encoding: .utf8))
+final class ImportFinder: SyntaxRewriter { … }
+```
+
+Good:
+
+```swift
+let imports = SwiftFileParser.imports(inSource: source)
+final class GetImportVisitor: SyntaxVisitor { … }
+```

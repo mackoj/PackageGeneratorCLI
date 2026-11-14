@@ -21,6 +21,10 @@ extension RuleCategory {
         "concurrency",
         description: "Sendable and shared state. Read before you add a class or share state across tasks."
     )
+    static let performance = RuleCategory(
+        "performance",
+        description: "The scan path. Read before you parse Swift or walk a syntax tree."
+    )
     static let testing = RuleCategory(
         "testing",
         description: "Swift Testing, and no silenced tests. Read before you add, skip or mark a test."

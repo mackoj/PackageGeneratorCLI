@@ -97,6 +97,26 @@ import Testing
         #expect(found.map(\.location.line) == [1])
     }
 
+    @Test func fullParsesAreFound() {
+        let found = Detect.fullParses(
+            in: scope(
+                """
+                let tree = Parser.parse(source: text)
+                final class Finder: SyntaxRewriter {}
+                let imports = SwiftFileParser.imports(inSource: text)
+                let value = JSONParser.parse(text)
+                """))
+        #expect(found.map(\.location.line).sorted() == [1, 2])
+    }
+
+    @Test func parsingInSwiftFileParserPasses() {
+        let found = Detect.fullParses(
+            in: scope(
+                "let tree = Parser.parse(source: prefix)",
+                at: "Sources/PackageGeneratorCore/Parsing/SwiftFileParser.swift"))
+        #expect(found.isEmpty)
+    }
+
     @Test func xcTestImportsAreFound() {
         let found = Detect.xcTestImports(in: scope("import XCTest\nimport Testing", at: "Tests/T/A.swift"))
         #expect(found.map(\.location.line) == [1])
