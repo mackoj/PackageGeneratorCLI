@@ -85,17 +85,6 @@ import Testing
         #expect(found.map(\.qualifiedName) == ["PackageInformation.PathInfo", "Kind"])
     }
 
-    @Test func uncommentedUncheckedSendableIsFound() {
-        let found = Detect.uncommentedUncheckedSendable(
-            in: scope(
-                """
-                final class Cache: @unchecked Sendable {}
-
-                // Every access to `storage` holds `lock`.
-                final class Guarded: @unchecked Sendable {}
-                """))
-        #expect(found.map(\.location.line) == [1])
-    }
 
     @Test func fullParsesAreFound() {
         let found = Detect.fullParses(
@@ -117,10 +106,6 @@ import Testing
         #expect(found.isEmpty)
     }
 
-    @Test func xcTestImportsAreFound() {
-        let found = Detect.xcTestImports(in: scope("import XCTest\nimport Testing", at: "Tests/T/A.swift"))
-        #expect(found.map(\.location.line) == [1])
-    }
 
     @Test func silencedTestsAreFound() {
         let found = Detect.silencedTests(

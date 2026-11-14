@@ -30,7 +30,7 @@ imports as JSON. These are the rules a change is reviewed against. The mechanica
 
 - Swift 6 language mode. Work that runs in task groups is a `Sendable` value type (`PackageProcessor`,
   `SwiftFileParser`); shared mutable state is an `actor`.
-- `@unchecked Sendable` carries a comment on the declaration that says what guards the state.
+- `@unchecked Sendable` carries a `//` comment just above the declaration that says what guards the state (a `///` doc comment does not count).
 - Output is deterministic whatever the scheduling: imports are deduplicated and sorted.
 
 ## Performance
