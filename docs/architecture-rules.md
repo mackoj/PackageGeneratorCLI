@@ -118,7 +118,7 @@ Sendable and shared state. Read before you add a class or share state across tas
 
 `unchecked-sendable-explains-itself`: `@unchecked Sendable` turns off the compiler's data-race check for the type. The comment is the only proof left that the type is safe to share across the task groups that parse files concurrently (CODING_STANDARDS.md, "Concurrency").
 
-**How to fix:** Prefer a value type or an `actor`. If neither fits, put a comment on the declaration that says what guards the mutable state.
+**How to fix:** Prefer a value type or an `actor`. If neither fits, put a `//` comment just above the declaration that says what guards the mutable state. A `///` doc comment describes the type to its users and does not count.
 
 Bad:
 
@@ -129,7 +129,7 @@ final class MockLogSink: LogSink, @unchecked Sendable {
 Good:
 
 ```swift
-/// Thread-safe via NSLock: every access to `_entries` holds `lock`.
+// @unchecked Sendable: every access to `_entries` holds `lock`.
 final class MockLogSink: LogSink, @unchecked Sendable {
 ```
 

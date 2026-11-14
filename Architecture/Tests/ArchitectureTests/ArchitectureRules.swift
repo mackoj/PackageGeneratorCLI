@@ -33,7 +33,7 @@ struct ArchitectureRules {
     }
 
     @Test func uncheckedSendableExplainsItself() throws {
-        expectNone(Detect.uncommentedUncheckedSendable(in: try Self.sources()), rule: .uncheckedSendableExplainsItself)
+        expectNone(try Self.sources().uncommentedUncheckedSendable, rule: .uncheckedSendableExplainsItself)
     }
 
     @Test func parsingGoesThroughTheImportRegion() throws {
@@ -45,7 +45,7 @@ struct ArchitectureRules {
     @Test func testsUseSwiftTesting() throws {
         let tests = try Self.tests()
         #expect(tests.containing("import Testing").relativePaths.count >= 2)
-        expectNone(Detect.xcTestImports(in: tests), rule: .testsUseSwiftTesting)
+        expectNone(tests.xcTestImports, rule: .testsUseSwiftTesting)
     }
 
     @Test func testsAreNotDisabled() throws {

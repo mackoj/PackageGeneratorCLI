@@ -36,8 +36,7 @@ struct OSLogSink: LogSink {
 // MARK: - MockLogSink
 
 /// Test-only sink. Collects entries for assertion.
-/// Thread-safe via NSLock. @unchecked Sendable because the lock
-/// provides the required synchronization the compiler cannot verify.
+// @unchecked Sendable: every access to `_entries` holds `lock`, which the compiler cannot verify.
 final class MockLogSink: LogSink, @unchecked Sendable {
   struct Entry: Sendable, Equatable {
     let level: LogLevel
