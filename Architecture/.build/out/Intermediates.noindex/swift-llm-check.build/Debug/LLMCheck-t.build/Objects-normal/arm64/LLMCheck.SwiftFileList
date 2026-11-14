@@ -1,0 +1,14 @@
+/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Codebase/Codebase.swift
+/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Codebase/Configuration.swift
+/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Codebase/PathPattern.swift
+/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Rules/Baseline.swift
+/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Rules/Expectations.swift
+/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Rules/Rule.swift
+/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Rules/RuleCatalog.swift
+/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Rules/XCTestExpectations.swift
+/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Scope.swift
+/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Source/Comments.swift
+/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Source/Declaration.swift
+/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Source/Finding.swift
+/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Source/SourceFile.swift
+/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Support/Locked.swift

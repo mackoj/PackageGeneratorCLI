@@ -1,0 +1,23 @@
+{
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-syntax/Sources/SwiftParser/IncrementalParseTransition.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/IncrementalParseTransition.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/IncrementalParseTransition.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/IncrementalParseTransition.dia",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/IncrementalParseTransition.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/IncrementalParseTransition.swiftdeps"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-syntax/Sources/SwiftParser/IsValidIdentifier.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/IsValidIdentifier.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/IsValidIdentifier.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/IsValidIdentifier.dia",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/IsValidIdentifier.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/IsValidIdentifier.swiftdeps"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-syntax/Sources/SwiftParser/Lexer/Cursor.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/Cursor.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/Cursor.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/Cursor.dia",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/Cursor.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/Cursor.swiftdeps"
+  }
+}

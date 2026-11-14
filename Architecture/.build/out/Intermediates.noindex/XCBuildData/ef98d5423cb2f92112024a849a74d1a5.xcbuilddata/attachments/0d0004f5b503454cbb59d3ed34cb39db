@@ -1,0 +1,4 @@
+module SwiftSyntax510 {
+header "SwiftSyntax510-Swift.h"
+export *
+}

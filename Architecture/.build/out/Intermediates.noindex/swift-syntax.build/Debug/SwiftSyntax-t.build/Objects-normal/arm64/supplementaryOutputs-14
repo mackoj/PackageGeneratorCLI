@@ -1,0 +1,30 @@
+{
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-syntax/Sources/SwiftSyntax/generated/raw/RawSyntaxNodesAB.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesAB.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesAB.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesAB.dia",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesAB.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesAB.swiftdeps"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-syntax/Sources/SwiftSyntax/generated/raw/RawSyntaxNodesC.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesC.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesC.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesC.dia",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesC.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesC.swiftdeps"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-syntax/Sources/SwiftSyntax/generated/raw/RawSyntaxNodesD.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesD.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesD.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesD.dia",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesD.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesD.swiftdeps"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-syntax/Sources/SwiftSyntax/generated/raw/RawSyntaxNodesEF.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesEF.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesEF.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesEF.dia",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesEF.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/RawSyntaxNodesEF.swiftdeps"
+  }
+}

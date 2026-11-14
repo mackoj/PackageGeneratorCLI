@@ -1,0 +1,30 @@
+{
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-syntax/Sources/SwiftSyntax/BumpPtrAllocator.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/BumpPtrAllocator.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/BumpPtrAllocator.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/BumpPtrAllocator.dia",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/BumpPtrAllocator.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/BumpPtrAllocator.swiftdeps"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-syntax/Sources/SwiftSyntax/CommonAncestor.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/CommonAncestor.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/CommonAncestor.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/CommonAncestor.dia",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/CommonAncestor.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/CommonAncestor.swiftdeps"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-syntax/Sources/SwiftSyntax/Convenience.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/Convenience.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/Convenience.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/Convenience.dia",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/Convenience.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/Convenience.swiftdeps"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-syntax/Sources/SwiftSyntax/CustomTraits.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/CustomTraits.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/CustomTraits.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/CustomTraits.dia",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/CustomTraits.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftSyntax-t.build/Objects-normal/arm64/CustomTraits.swiftdeps"
+  }
+}

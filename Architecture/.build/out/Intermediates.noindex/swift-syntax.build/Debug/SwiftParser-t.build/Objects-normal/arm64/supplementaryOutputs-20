@@ -1,0 +1,23 @@
+{
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-syntax/Sources/SwiftParser/CollectionNodes+Parsable.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/CollectionNodes+Parsable.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/CollectionNodes+Parsable.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/CollectionNodes+Parsable.dia",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/CollectionNodes+Parsable.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/CollectionNodes+Parsable.swiftdeps"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-syntax/Sources/SwiftParser/CompilerFiles.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/CompilerFiles.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/CompilerFiles.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/CompilerFiles.dia",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/CompilerFiles.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/CompilerFiles.swiftdeps"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-syntax/Sources/SwiftParser/Declarations.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/Declarations.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/Declarations.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/Declarations.dia",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/Declarations.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-syntax.build/Debug/SwiftParser-t.build/Objects-normal/arm64/Declarations.swiftdeps"
+  }
+}

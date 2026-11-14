@@ -1,0 +1,682 @@
+[
+  {
+    "isFramework" : true,
+    "moduleName" : "Accessibility",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/Accessibility-21CWN13GUU0SF.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "AppKit",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/AppKit-1WZ31L7GGZCC9.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "ColorSync",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/ColorSync-3IOD0FPQ5K83Q.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "Combine",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/Combine-2ZTXMLZRLA6KW.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "CoreData",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/CoreData-A57QF6DVOS6H.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "CoreFoundation",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/CoreFoundation-20I96649Z2ZTL.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "CoreGraphics",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/CoreGraphics-2TAHEQ7ST52ZF.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "CoreImage",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/CoreImage-UKA6P8ZGY236.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "CoreText",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/CoreText-8ZNRE1KEQRJG.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "CoreTransferable",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/CoreTransferable-29GYQD91IE82F.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "CoreVideo",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/CoreVideo-3CBBUHXPUOS5V.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "Darwin",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/Darwin-DW0G5Y56BHRR.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "DataDetection",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/DataDetection-S7ADFUIBVB6.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "DeveloperToolsSupport",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/DeveloperToolsSupport-275DQLE67ELKA.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "Dispatch",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/Dispatch-2G9AIV6JUHT1J.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "Foundation",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/Foundation-3DNSYXIK0TPFV.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "IOKit",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/IOKit-22K0I8L8P3054.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "ImageIO",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/ImageIO-1T35J9I7UUF3I.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "LLMCheck",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/Products\/Debug\/LLMCheck.swiftmodule\/arm64-apple-macos.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "Metal",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/Metal-3TN1G6TDL8YPM.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "OSLog",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/OSLog-RK01CEBFTSWZ.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "ObjectiveC",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/ObjectiveC-2ERD79LWOFCXO.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "Observation",
+    "modulePath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/swift\/macosx\/Observation.swiftmodule\/arm64-apple-macos.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "QuartzCore",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/QuartzCore-9JNRKTVAZGEG.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "Spatial",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/Spatial-29IR64V78Y23X.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "Swift",
+    "modulePath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/swift\/macosx\/Swift.swiftmodule\/arm64-apple-macos.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "SwiftOnoneSupport",
+    "modulePath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/swift\/macosx\/SwiftOnoneSupport.swiftmodule\/arm64-apple-macos.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "SwiftParser",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/Products\/Debug\/SwiftParser.swiftmodule\/arm64-apple-macos.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "SwiftSyntax",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/Products\/Debug\/SwiftSyntax.swiftmodule\/arm64-apple-macos.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "SwiftUICore",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/SwiftUICore-EFHY3CRV7YX.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "Symbols",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/Symbols-IT37I59OBY24.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "System",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/System-1FWRWNHJT2MAC.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "Testing",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/Testing-1G4WF9NEQUE1X.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "UniformTypeIdentifiers",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/UniformTypeIdentifiers-3GHN1B0VM90C9.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "XCTest",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/Intermediates.noindex\/SwiftExplicitPrecompiledModules\/XCTest-1CZOCZEJDE7AW.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "XCUIAutomation",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/Intermediates.noindex\/SwiftExplicitPrecompiledModules\/XCUIAutomation-3NW6V7DQDV927.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "XPC",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/XPC-3MQ1ZWPT91P58.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "_Builtin_float",
+    "modulePath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/swift\/macosx\/_Builtin_float.swiftmodule\/arm64-apple-macos.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "_Concurrency",
+    "modulePath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/swift\/macosx\/_Concurrency.swiftmodule\/arm64-apple-macos.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "_DarwinFoundation1",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/_DarwinFoundation1-3TZFH523U8HD5.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "_DarwinFoundation2",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/_DarwinFoundation2-3MZRHZ7YO0KDE.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "_DarwinFoundation3",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/_DarwinFoundation3-1L9ZYFUPL2U4H.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "_StringProcessing",
+    "modulePath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/swift\/macosx\/_StringProcessing.swiftmodule\/arm64-apple-macos.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "os",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/os-357T2ZKLT0Q5X.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "simd",
+    "modulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/simd-GAWTY2BMUFOY.swiftmodule"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Accessibility.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/Accessibility-8LOC8B6J9J7QCFXWOJ8RXMY46.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "Accessibility"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/AppKit.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/AppKit-6EMVYHR79RX1FH5RYGI20X41Q.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "AppKit"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/ApplicationServices.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/ApplicationServices-5W3P7XHFYP8RMXYXLIQY2PJU3.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "ApplicationServices"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CFNetwork.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/CFNetwork-87RU8OKYQRDS5GJ3PL97SDF5S.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CFNetwork"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/cups.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/CUPS-KZXLCZY9Q8CLD4KQ5JEJ35QY.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CUPS"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/ColorSync.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/ColorSync-675GGZYM8EYCRI55Y0OK0JQI.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "ColorSync"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreData.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/CoreData-EBROONR0XFVTHRRNQFKFLS7Y6.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CoreData"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreFoundation.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/CoreFoundation-B0V63RLAC5T55MD6ZYI4FMT96.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CoreFoundation"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreGraphics.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/CoreGraphics-A22RMURWJ1RXWAOR97AMDKC4K.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CoreGraphics"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreImage.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/CoreImage-B76MINEVAJZ3LIFTS3TSKXN0.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CoreImage"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreServices.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/CoreServices-44UCK3NRKYUHZ7F8MC6BUO3SG.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CoreServices"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreText.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/CoreText-9QU65I5BEHIQIGBB7VKTUYBJN.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CoreText"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreTransferable.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/CoreTransferable-7RJ681AZRS12UO7NJUYE115O2.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CoreTransferable"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreVideo.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/CoreVideo-4Q3CLB03T72HJROR1ZM2WEIQC.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CoreVideo"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/Darwin.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/Darwin-S2C5FTSMSVX8E7P4IWKD3B93.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "Darwin"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/DataDetection.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/DataDetection-3T8SBRHD0FD5SNVTM03A9DGSS.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "DataDetection"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/DeveloperToolsSupport.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/DeveloperToolsSupport-9CD69E05B2L1RRB3MN6HYQ3LZ.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "DeveloperToolsSupport"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/DiskArbitration.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/DiskArbitration-8DLII6LN8HF27RSF4Z4NH34YF.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "DiskArbitration"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/dispatch.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/Dispatch-C8D39E4H3LLRTT9N3G4IF33NA.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "Dispatch"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Foundation.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/Foundation-CEFYYCSI0NHRDJL2U6PID5BJX.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "Foundation"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/IOKit.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/IOKit-2VGCMYA623PAE1RHCM7TA4GZ2.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "IOKit"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/IOSurface.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/IOSurface-8D4POHCXVHJPQ43WO45MDABPZ.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "IOSurface"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/ImageIO.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/ImageIO-W87B63HSSB9C214FZZZ36PNX.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "ImageIO"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinBasic.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/MachO-6ZXB96J49I2H6MG3FMTK9WR9M.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "MachO"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Metal.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/Metal-C134CYNH1FC07N5W7HR4VKKKD.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "Metal"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/OSLog.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/OSLog-ALCXQ714TI1SFH7JHU8XWZFFU.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "OSLog"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/ObjectiveC.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/ObjectiveC-D5S2Q64MQTFPUM4J76GE8PJXO.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "ObjectiveC"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/OpenGL.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/OpenGL-50672ZBO73ZCFX4S63BF8JTPD.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "OpenGL"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/QuartzCore.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/QuartzCore-C9EEP3ZZ9S8WQXFP9EX54YNOI.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "QuartzCore"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Security.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/Security-E5KA4MACXNP4EG7POKT9WT1XA.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "Security"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/Spatial\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/Spatial-BJXXVGS5AFWU4UELVIIVT259Q.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "Spatial"
+  },
+  {
+    "clangModuleMapPath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/swift\/shims\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/SwiftShims-2SG5JOJMOUGTIFACWUYF81PEP.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "SwiftShims"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/SwiftUICore.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/SwiftUICore-E9HUFMBX9T6B61IHDSR4IPHT0.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "SwiftUICore"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Symbols.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/Symbols-4E6CHPZZT00IYYTN113PSWGOD.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "Symbols"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/UniformTypeIdentifiers.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/UniformTypeIdentifiers-MMJX88LAFVRQDBR6G1KAU6CS.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "UniformTypeIdentifiers"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/Library\/Frameworks\/XCTest.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/Intermediates.noindex\/SwiftExplicitPrecompiledModules\/XCTest-4YMGGQVTLAGF8QXUOUMDFFTPG.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "XCTest"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/Library\/Frameworks\/XCUIAutomation.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/Intermediates.noindex\/SwiftExplicitPrecompiledModules\/XCUIAutomation-7DLVZ7XBG2FNT7BGLQ3TVJV4X.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "XCUIAutomation"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/xpc.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/XPC-6MEDR641NI2J87OI5DOIFWMBR.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "XPC"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation1.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/_AvailabilityInternal-DB6QGJBSJ740BP5AUXMDNB5WX.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_AvailabilityInternal"
+  },
+  {
+    "clangModuleMapPath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_float-EFDYUXKDL8K2RS5HEVW3YZWAX.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_float"
+  },
+  {
+    "clangModuleMapPath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_intrinsics-4FIFL8UXILVIQDJAFLMXIPZD2.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_intrinsics"
+  },
+  {
+    "clangModuleMapPath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_inttypes-DQWHIO2U24PN8327ABBDBAMIE.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_inttypes"
+  },
+  {
+    "clangModuleMapPath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_limits-7UBOXFQYXKWPZZ7UVO58HTZB2.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_limits"
+  },
+  {
+    "clangModuleMapPath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_stdarg-EQPXY3NYXC0NI8R8KVE2FFCS9.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_stdarg"
+  },
+  {
+    "clangModuleMapPath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_stdatomic-7SY1C1AWFJV797M5643YWVUHC.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_stdatomic"
+  },
+  {
+    "clangModuleMapPath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_stdbool-AV1GFVY51FY7YWTHHYI9QHU8E.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_stdbool"
+  },
+  {
+    "clangModuleMapPath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_stddef-9MSKGZERNM3TRIJ8QF7K8K0UA.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_stddef"
+  },
+  {
+    "clangModuleMapPath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_stdint-89UA31GLUHDAK98HEIF7PHTT9.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_stdint"
+  },
+  {
+    "clangModuleMapPath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_tgmath-8UYH2AMZEQN6MPEESL75QURUW.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_tgmath"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation1.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/_DarwinFoundation1-58WIXESWI896PNZE8Z4REP3FE.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_DarwinFoundation1"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation2.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/_DarwinFoundation2-AIOC9L36NTS71VX6CYW8NNIOJ.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_DarwinFoundation2"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation3.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/_DarwinFoundation3-51T1ZZK6LZIWH9H57MAR6U4L3.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_DarwinFoundation3"
+  },
+  {
+    "clangModuleMapPath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/swift\/shims\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/_SwiftConcurrencyShims-65QTD11OC77UUAAUMJV3GVN0.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_SwiftConcurrencyShims"
+  },
+  {
+    "clangModuleMapPath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/checkouts\/swift-syntax\/Sources\/_SwiftSyntaxCShims\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/Intermediates.noindex\/SwiftExplicitPrecompiledModules\/_SwiftSyntaxCShims-6FH1VVT852AC7VL25IH5P927E.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_SwiftSyntaxCShims"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/launch.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/launch-7ST8VK2IDOI2FK2MNQUC94VNF.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "launch"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/libDER\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/libDER-94DTXOMRTCAF6G0OVQ3SJZF10.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "libDER"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/libkern.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/libkern-SF4439QV2WOG56KQ4UIVVXN9.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "libkern"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/os.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/os-B20235RR5RERJ9BJEFJD46UXN.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "os"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/os.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/os_object-1K3YAVK2QTSE9CROH2447G9Y4.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "os_object"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/os.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/os_workgroup-6U6NZOI6FEFW4V0EUHRBF0PG2.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "os_workgroup"
+  },
+  {
+    "clangModuleMapPath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/ptrauth-6LT08XNY9Z66KH70QC5CTAY4J.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "ptrauth"
+  },
+  {
+    "clangModuleMapPath" : "\/Users\/jeff\/Library\/Developer\/Toolchains\/swift-6.4.0-RELEASE.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/ptrcheck-98G14HP69PKOBBO1X5PACH1MD.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "ptrcheck"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/simd\/module.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/simd-9YNS88PZSE5RPQ89AVGVUD8WM.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "simd"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/c_standard_library.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/string_h-A0U4MTPWZUX880OFFQDLSHLJP.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "string_h"
+  },
+  {
+    "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation2.modulemap",
+    "clangModulePath" : "\/Users\/jeff\/Developer\/Personal\/PackageGeneratorCLI\/Architecture\/.build\/out\/SDKExplicitPrecompiledModules\/sys_types-7NK6JK6J7FXJUF0821MFF68PE.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "sys_types"
+  }
+]

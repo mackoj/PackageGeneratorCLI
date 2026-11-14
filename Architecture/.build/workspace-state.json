@@ -1,0 +1,82 @@
+{
+  "object" : {
+    "artifacts" : [
+
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "swift-llm-check",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/mackoj/swift-llm-check.git",
+          "name" : "swift-llm-check"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "9d074783729f0be0a040f92050a9dc0c221c8a7d",
+            "version" : "0.4.1"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "swift-llm-check"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "swift-syntax",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/swiftlang/swift-syntax.git",
+          "name" : "swift-syntax"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "050f1a346fbbac0ca2cfb15a95274f7bd1cf0ccf",
+            "version" : "604.0.0"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "swift-syntax"
+      }
+    ],
+    "prebuilts" : [
+      {
+        "cModules" : [
+
+        ],
+        "checkoutPath" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-syntax",
+        "identity" : "swift-syntax",
+        "includePath" : [
+          "Sources/_SwiftLibraryPluginProviderCShims/include",
+          "Sources/_SwiftSyntaxCShims/include"
+        ],
+        "libraryName" : "MacroSupport",
+        "path" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/prebuilts/swift-syntax/604.0.0/swift-6.4.0-RELEASE-macos_universal-MacroSupport",
+        "products" : [
+          "swift-syntaxPackageTests",
+          "SwiftBasicFormat",
+          "SwiftCompilerPlugin",
+          "SwiftDiagnostics",
+          "SwiftIDEUtils",
+          "SwiftIfConfig",
+          "SwiftWarningControl",
+          "SwiftLexicalLookup",
+          "SwiftOperators",
+          "SwiftParser",
+          "SwiftParserDiagnostics",
+          "SwiftRefactor",
+          "SwiftSyntax",
+          "SwiftSyntaxBuilder",
+          "SwiftSyntaxMacros",
+          "SwiftSyntaxMacroExpansion",
+          "SwiftSyntaxMacrosTestSupport",
+          "SwiftSyntaxMacrosGenericTestSupport",
+          "_SwiftCompilerPluginMessageHandling",
+          "_SwiftLibraryPluginProvider"
+        ],
+        "version" : "604.0.0"
+      }
+    ]
+  },
+  "version" : 7
+}

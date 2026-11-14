@@ -1,0 +1,4 @@
+module SwiftSyntax604 {
+header "SwiftSyntax604-Swift.h"
+export *
+}

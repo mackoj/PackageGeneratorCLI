@@ -1,0 +1,149 @@
+{
+  "" : {
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/LLMCheck-primary.dia",
+    "emit-module-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/LLMCheck-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/LLMCheck-primary-emit-module.dia",
+    "pch" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/LLMCheck-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/LLMCheck-primary.swiftdeps"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Codebase/Codebase.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Codebase.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Codebase.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Codebase.dia",
+    "index-unit-output-path" : "/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Codebase.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Codebase.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Codebase.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Codebase.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Codebase~partial.swiftmodule"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Codebase/Configuration.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Configuration.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Configuration.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Configuration.dia",
+    "index-unit-output-path" : "/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Configuration.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Configuration.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Configuration.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Configuration.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Configuration~partial.swiftmodule"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Codebase/PathPattern.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/PathPattern.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/PathPattern.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/PathPattern.dia",
+    "index-unit-output-path" : "/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/PathPattern.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/PathPattern.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/PathPattern.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/PathPattern.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/PathPattern~partial.swiftmodule"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Rules/Baseline.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Baseline.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Baseline.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Baseline.dia",
+    "index-unit-output-path" : "/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Baseline.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Baseline.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Baseline.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Baseline.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Baseline~partial.swiftmodule"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Rules/Expectations.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Expectations.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Expectations.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Expectations.dia",
+    "index-unit-output-path" : "/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Expectations.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Expectations.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Expectations.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Expectations.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Expectations~partial.swiftmodule"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Rules/Rule.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Rule.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Rule.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Rule.dia",
+    "index-unit-output-path" : "/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Rule.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Rule.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Rule.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Rule.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Rule~partial.swiftmodule"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Rules/RuleCatalog.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/RuleCatalog.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/RuleCatalog.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/RuleCatalog.dia",
+    "index-unit-output-path" : "/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/RuleCatalog.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/RuleCatalog.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/RuleCatalog.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/RuleCatalog.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/RuleCatalog~partial.swiftmodule"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Rules/XCTestExpectations.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/XCTestExpectations.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/XCTestExpectations.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/XCTestExpectations.dia",
+    "index-unit-output-path" : "/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/XCTestExpectations.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/XCTestExpectations.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/XCTestExpectations.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/XCTestExpectations.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/XCTestExpectations~partial.swiftmodule"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Scope.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Scope.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Scope.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Scope.dia",
+    "index-unit-output-path" : "/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Scope.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Scope.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Scope.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Scope.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Scope~partial.swiftmodule"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Source/Comments.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Comments.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Comments.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Comments.dia",
+    "index-unit-output-path" : "/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Comments.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Comments.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Comments.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Comments.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Comments~partial.swiftmodule"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Source/Declaration.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Declaration.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Declaration.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Declaration.dia",
+    "index-unit-output-path" : "/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Declaration.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Declaration.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Declaration.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Declaration.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Declaration~partial.swiftmodule"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Source/Finding.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Finding.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Finding.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Finding.dia",
+    "index-unit-output-path" : "/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Finding.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Finding.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Finding.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Finding.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Finding~partial.swiftmodule"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Source/SourceFile.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/SourceFile.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/SourceFile.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/SourceFile.dia",
+    "index-unit-output-path" : "/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/SourceFile.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/SourceFile.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/SourceFile.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/SourceFile.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/SourceFile~partial.swiftmodule"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/checkouts/swift-llm-check/Sources/LLMCheck/Support/Locked.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Locked.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Locked.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Locked.dia",
+    "index-unit-output-path" : "/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Locked.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Locked.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Locked.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Locked.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/swift-llm-check.build/Debug/LLMCheck-t.build/Objects-normal/arm64/Locked~partial.swiftmodule"
+  }
+}

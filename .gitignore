@@ -11,4 +11,10 @@ Package_generated.swift
 package-generator-cli.artifactbundle/
 xcuserdata/
 .swiftpm/
-output.json
+output.json/Architecture/.build
+/Architecture/.swiftpm
+/Benchmarks/.build
+/Benchmarks/.swiftpm
+/Benchmarks/.benchmarkBaselines
+/Architecture/Package.resolved
+/Benchmarks/Package.resolved

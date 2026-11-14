@@ -1,0 +1,69 @@
+{
+  "" : {
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/ArchitectureTests-primary.dia",
+    "emit-module-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/ArchitectureTests-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/ArchitectureTests-primary-emit-module.dia",
+    "pch" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/ArchitectureTests-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/ArchitectureTests-primary.swiftdeps"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/DerivedSources/test_entry_point.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/test_entry_point.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/test_entry_point.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/test_entry_point.dia",
+    "index-unit-output-path" : "/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/test_entry_point.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/test_entry_point.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/test_entry_point.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/test_entry_point.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/test_entry_point~partial.swiftmodule"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/Tests/ArchitectureTests/ArchitectureRules.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/ArchitectureRules.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/ArchitectureRules.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/ArchitectureRules.dia",
+    "index-unit-output-path" : "/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/ArchitectureRules.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/ArchitectureRules.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/ArchitectureRules.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/ArchitectureRules.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/ArchitectureRules~partial.swiftmodule"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/Tests/ArchitectureTests/Detect.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Detect.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Detect.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Detect.dia",
+    "index-unit-output-path" : "/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Detect.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Detect.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Detect.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Detect.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Detect~partial.swiftmodule"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/Tests/ArchitectureTests/DetectorTests.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/DetectorTests.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/DetectorTests.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/DetectorTests.dia",
+    "index-unit-output-path" : "/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/DetectorTests.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/DetectorTests.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/DetectorTests.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/DetectorTests.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/DetectorTests~partial.swiftmodule"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/Tests/ArchitectureTests/Rules.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Rules.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Rules.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Rules.dia",
+    "index-unit-output-path" : "/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Rules.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Rules.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Rules.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Rules.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Rules~partial.swiftmodule"
+  },
+  "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/Tests/ArchitectureTests/Support.swift" : {
+    "const-values" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Support.swiftconstvalues",
+    "dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Support.d",
+    "diagnostics" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Support.dia",
+    "index-unit-output-path" : "/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Support.o",
+    "llvm-bc" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Support.bc",
+    "object" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Support.o",
+    "swift-dependencies" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Support.swiftdeps",
+    "swiftmodule" : "/Users/jeff/Developer/Personal/PackageGeneratorCLI/Architecture/.build/out/Intermediates.noindex/Architecture.build/Debug/ArchitectureTests-p.build/Objects-normal/arm64/Support~partial.swiftmodule"
+  }
+}
