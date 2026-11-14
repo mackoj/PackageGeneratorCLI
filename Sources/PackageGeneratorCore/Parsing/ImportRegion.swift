@@ -39,21 +39,31 @@ enum ImportRegion {
     .map { Array($0.utf8) }
 
   /// The offset of the last `import` that is a whole word.
+  ///
+  /// A backward Horspool search: the letters of `import` are distinct, so a byte that is not `i` tells exactly how
+  /// far the next possible match starts, and a byte outside the word skips six.
   private static func lastImportKeyword(in source: UnsafeBufferPointer<UInt8>) -> Int? {
     let count = importWord.count
-    guard source.count >= count else { return nil }
     var index = source.count - count
     while index >= 0 {
-      if source[index] == UInt8(ascii: "i"),
-        source[index + 1] == UInt8(ascii: "m"), source[index + 2] == UInt8(ascii: "p"),
-        source[index + 3] == UInt8(ascii: "o"), source[index + 4] == UInt8(ascii: "r"),
-        source[index + 5] == UInt8(ascii: "t"),
-        index == 0 || !isIdentifierByte(source[index - 1]),
-        index + count == source.count || !isIdentifierByte(source[index + count])
-      {
-        return index
+      switch source[index] {
+      case UInt8(ascii: "i"):
+        if source[index + 1] == UInt8(ascii: "m"), source[index + 2] == UInt8(ascii: "p"),
+          source[index + 3] == UInt8(ascii: "o"), source[index + 4] == UInt8(ascii: "r"),
+          source[index + 5] == UInt8(ascii: "t"),
+          index == 0 || !isIdentifierByte(source[index - 1]),
+          index + count == source.count || !isIdentifierByte(source[index + count])
+        {
+          return index
+        }
+        index -= count
+      case UInt8(ascii: "m"): index -= 1
+      case UInt8(ascii: "p"): index -= 2
+      case UInt8(ascii: "o"): index -= 3
+      case UInt8(ascii: "r"): index -= 4
+      case UInt8(ascii: "t"): index -= 5
+      default: index -= count
       }
-      index -= 1
     }
     return nil
   }
