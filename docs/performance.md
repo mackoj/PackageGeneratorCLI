@@ -43,7 +43,7 @@ The trace stays in `Benchmarks/.build/profiles/` to open in Instruments.
 
 ## What has paid off
 
-0.7.1, on an Apple silicon Mac (p50):
+The first round, on an Apple silicon Mac (p50, before → after):
 
 | Benchmark | Wall clock | CPU | Mallocs | Retains | Peak memory |
 |---|---|---|---|---|---|
