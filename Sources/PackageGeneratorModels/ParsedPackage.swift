@@ -11,7 +11,7 @@ public struct ParsedPackage: Codable, Sendable, CustomStringConvertible {
   public var hasBiggestNumberOfDependencies: Bool = false
 
   public var hasResources: Bool {
-    resources != nil && resources!.isEmpty == false
+    resources?.isEmpty == false
   }
 
   public var description: String {
