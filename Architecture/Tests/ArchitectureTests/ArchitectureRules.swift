@@ -36,6 +36,12 @@ struct ArchitectureRules {
         expectNone(Detect.uncommentedUncheckedSendable(in: try Self.sources()), rule: .uncheckedSendableExplainsItself)
     }
 
+    @Test func parsingGoesThroughTheImportRegion() throws {
+        let sources = try Self.sources()
+        #expect(sources.calls(named: "parse").contains { $0.node.receiver?.trimmedDescription == "Parser" })
+        expectNone(Detect.fullParses(in: sources), rule: .parsingGoesThroughTheImportRegion)
+    }
+
     @Test func testsUseSwiftTesting() throws {
         let tests = try Self.tests()
         #expect(tests.containing("import Testing").relativePaths.count >= 2)

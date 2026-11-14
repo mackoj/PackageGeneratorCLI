@@ -50,6 +50,14 @@ enum Detect {
         }
     }
 
+    /// `Parser.parse(…)` outside `SwiftFileParser.swift`, and any reference to `SyntaxRewriter`.
+    static func fullParses(in scope: Scope) -> [Match<Syntax>] {
+        let parses = scope.excluding("SwiftFileParser.swift").calls(named: "parse").filter {
+            $0.node.receiver?.trimmedDescription == "Parser"
+        }
+        return parses.map(\.erased) + scope.references(to: "SyntaxRewriter")
+    }
+
     /// `import XCTest`.
     static func xcTestImports(in scope: Scope) -> [Match<ImportDeclSyntax>] {
         scope.imports(of: "XCTest")

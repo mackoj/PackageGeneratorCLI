@@ -35,6 +35,8 @@ imports as JSON. These are the rules a change is reviewed against. The mechanica
 
 ## Performance
 
+- Swift is parsed only through `SwiftFileParser`, which parses the leading part of a file that can hold imports
+  (`ImportRegion`). Trees are read with a `SyntaxVisitor` that skips what it does not need, never a `SyntaxRewriter`.
 - The CLI scans whole packages: thousands of files. Time and memory both matter. A change to the scan path
   (discovery, parsing, import extraction, JSON) is measured with `Benchmarks/` and states its before and after in
   the pull request; see [docs/performance.md](docs/performance.md).
