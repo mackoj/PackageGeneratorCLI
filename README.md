@@ -21,7 +21,7 @@ You normally don't install or run it yourself: the plugin downloads it as a preb
 - Every import form counts by its top-level module: `@testable`, `@_exported`, `import struct Foundation.URL`, and
   imports inside `#if canImport(…)`.
 - `public`, `internal` and `package` imports are dependencies; `private` and `fileprivate` imports are not.
-- A target importing itself (or a test target importing `<Name>Tests`) is dropped. Files in DocC catalogs are skipped.
+- An import of the module being scanned (`Name`, or `NameTests` in its test target) is dropped. Files in DocC catalogs are skipped.
 - Excludes are matched relative to the target, relative to the package (with or without `Sources/`/`Tests/`), or as
   absolute paths. The first `Resources` folder of a target is reported.
 - Dependencies are sorted and deduplicated. stdout stays empty: `--verbose` prints progress to stderr, and
