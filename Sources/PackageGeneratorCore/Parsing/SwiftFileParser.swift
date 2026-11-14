@@ -32,11 +32,23 @@ public struct SwiftFileParser: Sendable {
       throw CLIError.ioError(path: file.path, reason: error.localizedDescription)
     }
 
-    let sourceFile = Parser.parse(source: source)
-    let visitor = GetImportVisitor(viewMode: .all)
-    _ = visitor.visit(sourceFile)
-    let imports = visitor.drain().filter { $0 != targetModuleName }
-
+    let imports = Self.imports(inSource: source).filter { $0 != targetModuleName }
     return ParseResult(file: file, imports: imports, targetModuleName: targetModuleName)
+  }
+
+  /// The modules `source` imports, in order, with duplicates.
+  ///
+  /// Only the leading part of the file that can hold imports is parsed (see `ImportRegion`): for a typical file,
+  /// whose imports are at the top, that is a few lines instead of the whole file.
+  package static func imports(inSource source: String) -> [String] {
+    var source = source
+    return source.withUTF8 { bytes in
+      let length = ImportRegion.length(of: bytes)
+      guard length > 0 else { return [] }
+      let sourceFile = Parser.parse(source: UnsafeBufferPointer(rebasing: bytes[..<length]))
+      let visitor = GetImportVisitor(viewMode: .all)
+      visitor.walk(sourceFile)
+      return visitor.drain()
+    }
   }
 }

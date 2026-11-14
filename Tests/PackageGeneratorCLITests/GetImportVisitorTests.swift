@@ -96,8 +96,11 @@ struct GetImportVisitorTests {
   private func extractedImports(from source: String) -> [String] {
     let sourceFile = Parser.parse(source: source)
     let visitor = GetImportVisitor(viewMode: .all)
-    _ = visitor.visit(sourceFile)
-    return visitor.drain()
+    visitor.walk(sourceFile)
+    let imports = visitor.drain()
+    // The scanner parses only the leading part of a file; it must find the same imports as a full parse.
+    #expect(SwiftFileParser.imports(inSource: source) == imports)
+    return imports
   }
 
   private func parsedImportDecls(from source: String) -> [ImportDeclSyntax] {
