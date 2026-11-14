@@ -38,7 +38,7 @@ import Testing
         let found = Detect.strayLoggers(
             in: scope(
                 #"static let output = Logger(subsystem: subsystem, category: "Output")"#,
-                at: "Sources/PackageGeneratorCLI/Logging/Loggers.swift"))
+                at: "Sources/PackageGeneratorCore/Logging/Loggers.swift"))
         #expect(found.isEmpty)
     }
 
@@ -95,6 +95,26 @@ import Testing
                 final class Guarded: @unchecked Sendable {}
                 """))
         #expect(found.map(\.location.line) == [1])
+    }
+
+    @Test func fullParsesAreFound() {
+        let found = Detect.fullParses(
+            in: scope(
+                """
+                let tree = Parser.parse(source: text)
+                final class Finder: SyntaxRewriter {}
+                let imports = SwiftFileParser.imports(inSource: text)
+                let value = JSONParser.parse(text)
+                """))
+        #expect(found.map(\.location.line).sorted() == [1, 2])
+    }
+
+    @Test func parsingInSwiftFileParserPasses() {
+        let found = Detect.fullParses(
+            in: scope(
+                "let tree = Parser.parse(source: prefix)",
+                at: "Sources/PackageGeneratorCore/Parsing/SwiftFileParser.swift"))
+        #expect(found.isEmpty)
     }
 
     @Test func xcTestImportsAreFound() {

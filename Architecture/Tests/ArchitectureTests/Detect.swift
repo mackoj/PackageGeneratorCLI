@@ -10,9 +10,9 @@ enum Detect {
         }
     }
 
-    /// `Logger(…)` constructed outside `Sources/PackageGeneratorCLI/Logging`.
+    /// `Logger(…)` constructed outside `Sources/PackageGeneratorCore/Logging`.
     static func strayLoggers(in scope: Scope) -> [Match<FunctionCallExprSyntax>] {
-        scope.excluding("Sources/PackageGeneratorCLI/Logging").calls(named: "Logger").filter { call in
+        scope.excluding("Sources/PackageGeneratorCore/Logging").calls(named: "Logger").filter { call in
             call.node.receiver == nil && call.node.calledExpression.is(DeclReferenceExprSyntax.self)
         }
     }
@@ -48,6 +48,14 @@ enum Detect {
             let declaration = sequence(first: Syntax(match.node), next: \.parent).first { $0.is(DeclSyntax.self) }
             return declaration?.attachedComments.isEmpty ?? true
         }
+    }
+
+    /// `Parser.parse(…)` outside `SwiftFileParser.swift`, and any reference to `SyntaxRewriter`.
+    static func fullParses(in scope: Scope) -> [Match<Syntax>] {
+        let parses = scope.excluding("SwiftFileParser.swift").calls(named: "parse").filter {
+            $0.node.receiver?.trimmedDescription == "Parser"
+        }
+        return parses.map(\.erased) + scope.references(to: "SyntaxRewriter")
     }
 
     /// `import XCTest`.

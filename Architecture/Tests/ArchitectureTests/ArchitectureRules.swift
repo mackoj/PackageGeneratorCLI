@@ -14,7 +14,7 @@ struct ArchitectureRules {
 
     @Test func loggersAreCentralised() throws {
         let sources = try Self.sources()
-        #expect(!sources.in("Sources/PackageGeneratorCLI/Logging").relativePaths.isEmpty)
+        #expect(!sources.in("Sources/PackageGeneratorCore/Logging").relativePaths.isEmpty)
         expectNone(Detect.strayLoggers(in: sources), rule: .loggersAreCentralised)
     }
 
@@ -34,6 +34,12 @@ struct ArchitectureRules {
 
     @Test func uncheckedSendableExplainsItself() throws {
         expectNone(Detect.uncommentedUncheckedSendable(in: try Self.sources()), rule: .uncheckedSendableExplainsItself)
+    }
+
+    @Test func parsingGoesThroughTheImportRegion() throws {
+        let sources = try Self.sources()
+        #expect(sources.calls(named: "parse").contains { $0.node.receiver?.trimmedDescription == "Parser" })
+        expectNone(Detect.fullParses(in: sources), rule: .parsingGoesThroughTheImportRegion)
     }
 
     @Test func testsUseSwiftTesting() throws {

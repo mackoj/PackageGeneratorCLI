@@ -21,7 +21,7 @@ extension Rule {
 
     static let loggersAreCentralised = Rule(
         id: "loggers-are-centralised",
-        title: "An `os.Logger` is made only in `Sources/PackageGeneratorCLI/Logging`.",
+        title: "An `os.Logger` is made only in `Sources/PackageGeneratorCore/Logging`.",
         category: .output,
         rationale: """
             Every log line uses the subsystem `com.mackoj.PackageGeneratorCLI` and one of the categories listed in \
@@ -155,9 +155,35 @@ extension Rule {
     )
 }
 
+extension Rule {
+    static let parsingGoesThroughTheImportRegion = Rule(
+        id: "parsing-goes-through-the-import-region",
+        title: "Only `SwiftFileParser` calls `Parser.parse`, and nothing in `Sources` subclasses `SyntaxRewriter`.",
+        category: .performance,
+        rationale: """
+            Parsing whole files was over 90% of a scan's time and allocations. `SwiftFileParser.imports(inSource:)` \
+            parses only the leading part of a file that can hold imports (`ImportRegion`), which made scans about \
+            25 times faster (docs/performance.md, "What has paid off"). A second `Parser.parse` call site, or a \
+            `SyntaxRewriter` that walks and rebuilds every node, brings that cost back.
+            """,
+        howToFix: """
+            Call `SwiftFileParser.imports(inSource:)` or `SwiftFileParser().parse(file:targetModuleName:)`. To read \
+            the tree, subclass `SyntaxVisitor` and return `.skipChildren` from nodes whose inside you do not need.
+            """,
+        badExample: """
+            let tree = Parser.parse(source: try String(contentsOf: file, encoding: .utf8))
+            final class ImportFinder: SyntaxRewriter { … }
+            """,
+        goodExample: """
+            let imports = SwiftFileParser.imports(inSource: source)
+            final class GetImportVisitor: SyntaxVisitor { … }
+            """
+    )
+}
+
 /// Every rule, in the order `docs/architecture-rules.md` lists them.
 let allRules: [Rule] = [
     .stdoutIsNotWritten, .loggersAreCentralised, .failuresAreThrown, .modelsDependOnFoundationOnly,
     .publicModelsAreCodableAndSendable, .uncheckedSendableExplainsItself, .testsUseSwiftTesting,
-    .testsAreNotDisabled,
+    .parsingGoesThroughTheImportRegion, .testsAreNotDisabled,
 ]
