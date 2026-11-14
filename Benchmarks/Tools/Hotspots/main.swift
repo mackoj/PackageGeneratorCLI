@@ -71,7 +71,7 @@ for frames in reader.samples where !frames.isEmpty {
     guard !frames.contains(where: { $0.contains(measuring) }) else { continue }
     total += 1
     selfSamples[short(frames[0]), default: 0] += 1
-    for name in Set(frames.map(short)) where name.contains(/PackageGenerator|SwiftParser|SwiftSyntax/) {
+    for name in Set(frames.map(short)) where name.contains(/PackageProcessor|SwiftFileParser|GetImportVisitor|ImportRegion|Parser|Lexer|Syntax/) {
         inclusiveSamples[name, default: 0] += 1
     }
 }
@@ -83,4 +83,4 @@ func report(_ title: String, _ counts: [String: Int], of total: Int) {
 }
 print("\(total) samples")
 report("Self", selfSamples, of: total)
-report("Inclusive (PackageGenerator, SwiftParser, SwiftSyntax)", inclusiveSamples, of: total)
+report("Inclusive (scanner, SwiftParser, SwiftSyntax)", inclusiveSamples, of: total)
