@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PackageGenerator CLI · imports in, Package.swift out</title>
+<meta name="description" content="The import scanner behind the PackageGenerator plugin: it parses every Swift file of a package with swift-syntax, concurrently, and reports the modules each target imports so the plugin can write Package.swift for you.">
+<meta property="og:title" content="PackageGenerator CLI · imports in, Package.swift out">
+<meta property="og:description" content="Parse thousands of Swift files with swift-syntax and get each target's imports as JSON. The engine of the PackageGenerator SwiftPM plugin.">
+<meta property="og:type" content="website">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f05138'/%3E%3Cpath d='M9 9h6v6H9zM17 17h6v6h-6zM9 17h6v6H9z' fill='%23fff'/%3E%3Cpath d='M15 12h5v5' stroke='%23fff' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+<style>
+:root {
+  --bg: #fbfaf8;
+  --surface: #ffffff;
+  --surface-2: #f3f1ed;
+  --text: #1c1a17;
+  --muted: #5d5850;
+  --line: #e4e0d8;
+  --accent: #d9402a;
+  --accent-ink: #ffffff;
+  --accent-soft: #fbe3dd;
+  --code-bg: #1d1b19;
+  --code-text: #ece8e1;
+  --code-muted: #8f877b;
+  --tok-key: #ff8a65;
+  --tok-str: #a5d6a7;
+  --tok-type: #81c7f5;
+  --tok-num: #e6c07b;
+  --good: #2f7d4a;
+  --shadow: 0 1px 2px rgb(28 26 23 / 6%), 0 8px 24px rgb(28 26 23 / 6%);
+  --radius: 14px;
+  --max: 1120px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141311;
+    --surface: #1c1a18;
+    --surface-2: #23211e;
+    --text: #f1ede6;
+    --muted: #a8a196;
+    --line: #34312c;
+    --accent: #ff6a4d;
+    --accent-ink: #1a0d08;
+    --accent-soft: #3a1f18;
+    --code-bg: #0f0e0d;
+    --good: #6fcf8f;
+    --shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 8px 24px rgb(0 0 0 / 25%);
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  overflow-x: clip;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Inter, Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+code, pre { font: 14px/1.55 ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+.grid > *, .duo > *, .features > *, .flow > *, .install > * { min-width: 0; }
+:not(pre) > code { overflow-wrap: anywhere; background: var(--surface-2); border: 1px solid var(--line); border-radius: 6px; padding: .05em .35em; font-size: .88em; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+section { padding: 88px 0; }
+section + section { border-top: 1px solid var(--line); }
+h1, h2, h3 { line-height: 1.15; letter-spacing: -.02em; margin: 0; }
+h2 { font-size: clamp(28px, 4vw, 40px); }
+h3 { font-size: 19px; letter-spacing: -.01em; }
+.eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
+.lead { color: var(--muted); font-size: 19px; max-width: 700px; margin: 16px 0 0; }
+
+nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid var(--line); }
+nav .wrap { display: flex; align-items: center; gap: 24px; height: 60px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--text); text-decoration: none; }
+.brand svg { width: 26px; height: 26px; }
+nav .links { display: flex; gap: 22px; margin-left: auto; font-size: 15px; }
+nav .links a { color: var(--muted); text-decoration: none; }
+nav .links a:hover { color: var(--text); }
+@media (max-width: 760px) { nav .links a:not(.gh) { display: none; } }
+
+.hero { position: relative; overflow: hidden; padding: 96px 0 88px; }
+.hero::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; opacity: .55;
+  background-image: radial-gradient(var(--line) 1.4px, transparent 1.4px);
+  background-size: 22px 22px;
+  mask-image: radial-gradient(ellipse 70% 60% at 70% 30%, #000 10%, transparent 75%);
+}
+.hero .grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+@media (max-width: 960px) { .hero .grid { grid-template-columns: 1fr; gap: 40px; } }
+.hero h1 { font-size: clamp(40px, 6vw, 62px); }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; padding: 0; list-style: none; }
+.pills li { font-size: 13px; font-weight: 600; padding: 4px 11px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); color: var(--muted); }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.button { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 10px; font-weight: 600; font-size: 16px; text-decoration: none; border: 1px solid var(--line); color: var(--text); background: var(--surface); }
+.button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.button:hover { filter: brightness(1.05); }
+.button svg { width: 18px; height: 18px; }
+
+.code { background: var(--code-bg); color: var(--code-text); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+.code .bar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid rgb(255 255 255 / 7%); color: var(--code-muted); font-size: 13px; }
+.code .bar i { width: 11px; height: 11px; border-radius: 50%; background: #3a3632; display: inline-block; }
+.code .bar span { margin-left: 8px; }
+.code pre { margin: 0; padding: 20px; overflow-x: auto; }
+.hero .code pre { font-size: 13.5px; }
+.tok-k { color: var(--tok-key); }
+.tok-s { color: var(--tok-str); }
+.tok-t { color: var(--tok-type); }
+.tok-n { color: var(--tok-num); }
+.tok-c { color: var(--code-muted); font-style: italic; }
+
+.flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 44px; counter-reset: step; }
+@media (max-width: 960px) { .flow { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .flow { grid-template-columns: 1fr; } }
+.flow li { list-style: none; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; counter-increment: step; }
+.flow li::before { content: counter(step); display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 14px; margin-bottom: 12px; }
+.flow li p { margin: 8px 0 0; color: var(--muted); font-size: 15px; }
+.flow .who { display: block; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-top: 12px; }
+.flow .who.cli { color: var(--accent); }
+ol.flow { padding: 0; }
+
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+@media (max-width: 860px) { .duo { grid-template-columns: 1fr; } }
+
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 44px; }
+@media (max-width: 960px) { .features { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .features { grid-template-columns: 1fr; } }
+.feature { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+.feature p { color: var(--muted); font-size: 15px; margin: 8px 0 0; }
+
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.table { margin-top: 36px; overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+th { font-size: 13px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+td.num { font-variant-numeric: tabular-nums; }
+td .gain { color: var(--good); font-weight: 600; }
+.note { color: var(--muted); font-size: 14px; margin-top: 14px; }
+
+.install { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+@media (max-width: 860px) { .install { grid-template-columns: 1fr; } }
+.install h3 { margin-bottom: 10px; }
+.install p { color: var(--muted); font-size: 15px; margin: 0 0 14px; }
+
+footer { padding: 48px 0 64px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 18px 28px; align-items: center; }
+footer a { color: var(--muted); }
+footer .spacer { flex: 1; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="PackageGenerator CLI home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#f05138"/><path d="M9 9h6v6H9zM17 17h6v6h-6zM9 17h6v6H9z" fill="#fff"/><path d="M15 12h5v5" stroke="#fff" stroke-width="2" fill="none"/></svg>
+      PackageGenerator CLI
+    </a>
+    <div class="links">
+      <a href="#how">How it works</a>
+      <a href="#json">JSON</a>
+      <a href="#performance">Performance</a>
+      <a href="#install">Install</a>
+      <a class="gh" href="https://github.com/mackoj/PackageGeneratorCLI">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap grid">
+    <div>
+      <ul class="pills" aria-label="Highlights">
+        <li>swift-syntax</li>
+        <li>Swift 6, concurrent</li>
+        <li>macOS 13+</li>
+        <li>Artifact bundle</li>
+      </ul>
+      <h1>Your imports already say what your targets <em>depend on</em>.</h1>
+      <p class="lead">PackageGenerator CLI parses every Swift file of a package with swift-syntax and reports, per target,
+        the modules it imports. It is the engine of the
+        <a href="https://mackoj.github.io/PackageGeneratorPlugin/">PackageGenerator plugin</a>, which turns that report
+        into your <code>Package.swift</code>, so a 200-target app never has a dependency list that lies.</p>
+      <div class="cta">
+        <a class="button primary" href="https://mackoj.github.io/PackageGeneratorPlugin/">Use the plugin</a>
+        <a class="button" href="https://github.com/mackoj/PackageGeneratorCLI">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          Source on GitHub
+        </a>
+      </div>
+    </div>
+    <div class="code" role="figure" aria-label="Running the CLI">
+      <div class="bar"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><span class="tok-c"># What the plugin runs for you</span>
+package-generator-cli \
+  --input-file-url  <span class="tok-s">targets.json</span> \
+  --output-file-url <span class="tok-s">imports.json</span> \
+  --package-directory <span class="tok-s">.</span> --verbose
+
+<span class="tok-c">[package-generator-cli] Processing 212 targets</span>
+<span class="tok-c">[package-generator-cli] Processing target "Checkout"</span>
+<span class="tok-c">[package-generator-cli] Processing test module "CheckoutTests"</span>
+<span class="tok-c">…</span>
+<span class="tok-c">[package-generator-cli] Finished: 398 packages written, elapsed: 0.03 seconds</span></pre>
+    </div>
+  </div>
+</header>
+
+<section id="problem">
+  <div class="wrap">
+    <p class="eyebrow">The problem</p>
+    <h2>Hand-written dependency lists drift.</h2>
+    <p class="lead">In a modular app, every feature, client and helper is its own SwiftPM target. Someone adds
+      <code>import Analytics</code> and forgets the manifest; someone removes the last use of <code>Networking</code>
+      and the dependency stays forever. Builds break in CI, or worse, keep working with a graph nobody can reason about.</p>
+    <p class="lead">The source of truth is already in your files: the imports. PackageGenerator reads them and writes the
+      manifest. This CLI is the part that reads them, fast enough to run on every change.</p>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2>Plugin and CLI, one pass.</h2>
+    <ol class="flow">
+      <li><h3>Describe targets</h3><p>You list target folders once in <code>packageGenerator.yaml</code>.</p><span class="who">Plugin</span></li>
+      <li><h3>Hand them over</h3><p>The plugin resolves paths and writes a JSON list of targets, tests and excludes.</p><span class="who">Plugin</span></li>
+      <li><h3>Scan every file</h3><p>The CLI parses each target's Swift files concurrently and writes each target's imports as JSON.</p><span class="who cli">This CLI</span></li>
+      <li><h3>Write Package.swift</h3><p>The plugin drops Apple SDKs, maps imports to targets and products, and writes the manifest.</p><span class="who">Plugin</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="json">
+  <div class="wrap">
+    <p class="eyebrow">The contract</p>
+    <h2>JSON in, JSON out.</h2>
+    <p class="lead">The input names each target, its optional test target and paths to exclude. A bare path string, the
+      original format, still works. The output lists each target's imported modules, sorted and deduplicated, with the
+      target's path and its <code>Resources</code> folder if it has one. Both types ship in the
+      <code>PackageGeneratorModels</code> library.</p>
+    <div class="duo">
+      <div class="code" role="figure" aria-label="Input JSON">
+        <div class="bar"><i></i><i></i><i></i><span>targets.json (input)</span></div>
+<pre>[
+  {
+    <span class="tok-t">"target"</span>: { <span class="tok-t">"path"</span>: <span class="tok-s">"/App/Sources/Checkout"</span>, <span class="tok-t">"name"</span>: <span class="tok-s">"Checkout"</span> },
+    <span class="tok-t">"test"</span>: {
+      <span class="tok-t">"path"</span>: <span class="tok-s">"/App/Tests/CheckoutTests"</span>,
+      <span class="tok-t">"name"</span>: <span class="tok-s">"CheckoutTests"</span>,
+      <span class="tok-t">"exclude"</span>: [<span class="tok-s">"__Snapshots__"</span>]
+    }
+  },
+  <span class="tok-s">"/App/Sources/Legacy"</span>
+]</pre>
+      </div>
+      <div class="code" role="figure" aria-label="Output JSON">
+        <div class="bar"><i></i><i></i><i></i><span>imports.json (output)</span></div>
+<pre>[
+  {
+    <span class="tok-t">"name"</span>: <span class="tok-s">"Checkout"</span>,
+    <span class="tok-t">"isTest"</span>: <span class="tok-k">false</span>,
+    <span class="tok-t">"dependencies"</span>: [<span class="tok-s">"Analytics"</span>, <span class="tok-s">"Foundation"</span>, <span class="tok-s">"Payments"</span>, <span class="tok-s">"SwiftUI"</span>],
+    <span class="tok-t">"path"</span>: <span class="tok-s">"Sources/Checkout"</span>,
+    <span class="tok-t">"fullPath"</span>: <span class="tok-s">"/App/Sources/Checkout"</span>,
+    <span class="tok-t">"resources"</span>: <span class="tok-s">"Resources"</span>,
+    <span class="tok-t">"localDependencies"</span>: <span class="tok-n">0</span>,
+    <span class="tok-t">"hasBiggestNumberOfDependencies"</span>: <span class="tok-k">false</span>
+  },
+  …
+]</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <p class="eyebrow">What it reads</p>
+    <h2>Real Swift, parsed like the compiler does.</h2>
+    <p class="lead">No regular expressions over your code: swift-syntax builds the syntax tree, so comments, strings and
+      odd formatting never fool it.</p>
+    <div class="features">
+      <div class="feature"><h3>Every import form</h3><p><code>@testable</code>, <code>@_exported</code>,
+        <code>import struct Foundation.URL</code> and imports inside <code>#if canImport(…)</code> all count, by their
+        top-level module.</p></div>
+      <div class="feature"><h3>Access levels honoured</h3><p><code>public</code>, <code>internal</code> and
+        <code>package</code> imports are dependencies; <code>private</code> and <code>fileprivate</code> ones are not.</p></div>
+      <div class="feature"><h3>Self-imports dropped</h3><p>A file that imports its own module never turns into a target
+        depending on itself.</p></div>
+      <div class="feature"><h3>Excludes and Resources</h3><p>Paths are excluded relative to the target, the package or
+        absolutely; a <code>Resources</code> folder is reported for the plugin to declare.</p></div>
+      <div class="feature"><h3>Concurrent and bounded</h3><p>Targets and files are processed in task groups with a sliding
+        window of twice the core count, under Swift 6 strict concurrency.</p></div>
+      <div class="feature"><h3>Quiet by design</h3><p>stdout stays empty; <code>--verbose</code> prints progress to stderr,
+        and diagnostics go to os_log under <code>com.mackoj.PackageGeneratorCLI</code>.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="performance">
+  <div class="wrap">
+    <p class="eyebrow">Performance</p>
+    <h2>Reads only what it needs.</h2>
+    <p class="lead">Imports live at the top of a file, so the scanner finds the end of the last import declaration and
+      parses only that much. Across 23,000 open-source Swift files it parses 9% of the bytes and finds exactly the
+      imports a full parse finds.</p>
+    <div class="table">
+      <table>
+        <thead><tr><th>Benchmark</th><th>Before</th><th>After</th><th>Mallocs</th></tr></thead>
+        <tbody>
+          <tr><td>Scan a package, 2,040 files in 80 targets</td><td class="num">767 ms</td><td class="num">29 ms <span class="gain">26.7x</span></td><td class="num">1.53M → 154k</td></tr>
+          <tr><td>Scan one target, 500 files</td><td class="num">286 ms</td><td class="num">10 ms <span class="gain">27.7x</span></td><td class="num">556k → 50k</td></tr>
+          <tr><td>Parse 100 files, one at a time</td><td class="num">92 ms</td><td class="num">4.2 ms <span class="gain">21.7x</span></td><td class="num">73.6k → 6.1k</td></tr>
+          <tr><td>Decode 2,000 input targets</td><td class="num">11.4 ms</td><td class="num">8.2 ms</td><td class="num">44.3k → 39.9k</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">p50 on an Apple silicon Mac, measured with <a href="https://github.com/ordo-one/package-benchmark">package-benchmark</a>
+      on a synthetic package. Method and history: <a href="https://github.com/mackoj/PackageGeneratorCLI/blob/main/docs/performance.md">docs/performance.md</a>.</p>
+  </div>
+</section>
+
+<section id="install">
+  <div class="wrap">
+    <p class="eyebrow">Install</p>
+    <h2>Most people never install it.</h2>
+    <p class="lead">Add the plugin and it downloads the CLI as a prebuilt artifact bundle. Reach for the CLI directly only to
+      script it or to build your own tooling on its JSON.</p>
+    <div class="install">
+      <div>
+        <h3>The plugin (recommended)</h3>
+        <p>In your root <code>Package.swift</code>, then right-click the package in Xcode, or run it from CI.</p>
+        <div class="code"><div class="bar"><i></i><i></i><i></i><span>Package.swift</span></div>
+<pre>.package(
+  url: <span class="tok-s">"https://github.com/mackoj/PackageGeneratorPlugin.git"</span>,
+  from: <span class="tok-s">"1.0.5"</span>
+)</pre></div>
+        <div class="code" style="margin-top:16px"><div class="bar"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre>swift package plugin \
+  --allow-writing-to-package-directory package-generator</pre></div>
+      </div>
+      <div>
+        <h3>The CLI on its own</h3>
+        <p>Download the artifact bundle from the <a href="https://github.com/mackoj/PackageGeneratorCLI/releases/latest">latest release</a>, or build it from source.</p>
+        <div class="code"><div class="bar"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre>git clone https://github.com/mackoj/PackageGeneratorCLI.git
+cd PackageGeneratorCLI
+swift build -c release
+.build/release/package-generator-cli --help</pre></div>
+        <div class="code" style="margin-top:16px"><div class="bar"><i></i><i></i><i></i><span>Decode the output in Swift</span></div>
+<pre><span class="tok-c">// .product(name: "PackageGeneratorModels", package: "PackageGeneratorCLI")</span>
+<span class="tok-k">import</span> Foundation
+<span class="tok-k">import</span> PackageGeneratorModels
+
+<span class="tok-k">let</span> output = <span class="tok-t">URL</span>(fileURLWithPath: <span class="tok-s">"imports.json"</span>)
+<span class="tok-k">let</span> packages = <span class="tok-k">try</span> <span class="tok-t">JSONDecoder</span>().decode(
+  [<span class="tok-t">ParsedPackage</span>].<span class="tok-k">self</span>, from: <span class="tok-t">Data</span>(contentsOf: output))
+<span class="tok-k">for</span> package <span class="tok-k">in</span> packages <span class="tok-k">where</span> !package.isTest {
+  print(package.name, package.dependencies)
+}</pre></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>PackageGenerator CLI, MIT licensed.</span>
+    <a href="https://mackoj.github.io/PackageGeneratorPlugin/">PackageGenerator plugin</a>
+    <a href="https://github.com/mackoj/PackageGeneratorCLI">GitHub</a>
+    <a href="https://github.com/mackoj/PackageGeneratorCLI/releases">Releases</a>
+    <a href="https://github.com/mackoj/PackageGeneratorCLI/blob/main/docs/architecture-rules.md">Architecture rules</a>
+    <span class="spacer"></span>
+    <span>Built on <a href="https://github.com/swiftlang/swift-syntax">swift-syntax</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
