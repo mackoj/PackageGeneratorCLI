@@ -288,8 +288,8 @@ package-generator-cli \
         top-level module.</p></div>
       <div class="feature"><h3>Access levels honoured</h3><p><code>public</code>, <code>internal</code> and
         <code>package</code> imports are dependencies; <code>private</code> and <code>fileprivate</code> ones are not.</p></div>
-      <div class="feature"><h3>Self-imports dropped</h3><p>A test target importing the module it tests, or a target
-        naming itself, never becomes a cycle.</p></div>
+      <div class="feature"><h3>Self-imports dropped</h3><p>A file that imports its own module never turns into a target
+        depending on itself.</p></div>
       <div class="feature"><h3>Excludes and Resources</h3><p>Paths are excluded relative to the target, the package or
         absolutely; a <code>Resources</code> folder is reported for the plugin to declare.</p></div>
       <div class="feature"><h3>Concurrent and bounded</h3><p>Targets and files are processed in task groups with a sliding
