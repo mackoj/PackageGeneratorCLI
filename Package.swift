@@ -9,6 +9,8 @@ let package = Package(
   products: [
     .executable(name: "package-generator-cli", targets: ["PackageGeneratorCLI"]),
     .library(name: "PackageGeneratorModels", targets: ["PackageGeneratorModels"]),
+    // The scanner behind the CLI, a library so `Benchmarks/` can measure it. Not a stable API.
+    .library(name: "PackageGeneratorCore", targets: ["PackageGeneratorCore"]),
   ],
   dependencies: [
     .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.1.4"),
@@ -18,19 +20,26 @@ let package = Package(
     .target(
       name: "PackageGeneratorModels"
     ),
-    .executableTarget(
-      name: "PackageGeneratorCLI",
+    .target(
+      name: "PackageGeneratorCore",
       dependencies: [
         "PackageGeneratorModels",
         .product(name: "SwiftParser", package: "swift-syntax"),
         .product(name: "SwiftSyntax", package: "swift-syntax"),
+      ]
+    ),
+    .executableTarget(
+      name: "PackageGeneratorCLI",
+      dependencies: [
+        "PackageGeneratorCore",
+        "PackageGeneratorModels",
         .product(name: "ArgumentParser", package: "swift-argument-parser"),
       ]
     ),
     .testTarget(
       name: "PackageGeneratorCLITests",
       dependencies: [
-        "PackageGeneratorCLI",
+        "PackageGeneratorCore",
         .product(name: "SwiftParser", package: "swift-syntax"),
         .product(name: "SwiftSyntax", package: "swift-syntax"),
       ]

@@ -10,9 +10,9 @@ enum Detect {
         }
     }
 
-    /// `Logger(…)` constructed outside `Sources/PackageGeneratorCLI/Logging`.
+    /// `Logger(…)` constructed outside `Sources/PackageGeneratorCore/Logging`.
     static func strayLoggers(in scope: Scope) -> [Match<FunctionCallExprSyntax>] {
-        scope.excluding("Sources/PackageGeneratorCLI/Logging").calls(named: "Logger").filter { call in
+        scope.excluding("Sources/PackageGeneratorCore/Logging").calls(named: "Logger").filter { call in
             call.node.receiver == nil && call.node.calledExpression.is(DeclReferenceExprSyntax.self)
         }
     }

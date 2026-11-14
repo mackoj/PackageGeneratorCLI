@@ -1,6 +1,6 @@
 import Foundation
 
-enum CLIError: LocalizedError, Sendable {
+package enum CLIError: LocalizedError, Sendable {
   case fileNotFound(path: String)
   case directoryNotFound(path: String)
   case invalidJSON(file: String, reason: String)
@@ -9,7 +9,7 @@ enum CLIError: LocalizedError, Sendable {
   case invalidInput(reason: String)
   case writeFailure(path: String, reason: String)
 
-  var errorDescription: String? {
+  package var errorDescription: String? {
     switch self {
     case .fileNotFound(let path):          return "File not found: \(path)"
     case .directoryNotFound(let path):     return "Directory not found: \(path)"

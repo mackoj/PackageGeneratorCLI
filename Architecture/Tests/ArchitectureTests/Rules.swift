@@ -21,7 +21,7 @@ extension Rule {
 
     static let loggersAreCentralised = Rule(
         id: "loggers-are-centralised",
-        title: "An `os.Logger` is made only in `Sources/PackageGeneratorCLI/Logging`.",
+        title: "An `os.Logger` is made only in `Sources/PackageGeneratorCore/Logging`.",
         category: .output,
         rationale: """
             Every log line uses the subsystem `com.mackoj.PackageGeneratorCLI` and one of the categories listed in \

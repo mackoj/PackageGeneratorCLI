@@ -1,5 +1,5 @@
 import Testing
-@testable import PackageGeneratorCLI
+@testable import PackageGeneratorCore
 import SwiftParser
 import SwiftSyntax
 
