@@ -73,7 +73,7 @@ Output: one entry per target and test target.
 Both types are in the `PackageGeneratorModels` library, if you want to build your own tooling on the output:
 
 ```swift
-.package(url: "https://github.com/mackoj/PackageGeneratorCLI.git", from: "0.7.0"),
+.package(url: "https://github.com/mackoj/PackageGeneratorCLI.git", from: "0.7.1"),
 // …
 .product(name: "PackageGeneratorModels", package: "PackageGeneratorCLI"),
 ```
