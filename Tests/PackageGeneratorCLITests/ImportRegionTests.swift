@@ -26,6 +26,8 @@ struct ImportRegionTests {
     "let x = 1\nimport Late",
     "import Été\nlet x = 1",
     "import Foundation\nimport",
+    "import A\nlet imporimport = 1; let mport = 2; let x = timport",
+    "import A\nimport B\nlet t = \"tropmi import\"",
   ]
 
   @Test(arguments: sources)
