@@ -16,16 +16,18 @@ public struct PackageInformation: Codable, Sendable {
   public let target: PathInfo
   
   public init(from decoder: any Decoder) throws {
-    // Legacy Parser
-    let stringContainer = try decoder.singleValueContainer()
-    if let pathString = try? stringContainer.decode(String.self) {
+    // The current format, an object, is tried first: a failed decode builds an error, and most entries are objects.
+    let container: KeyedDecodingContainer<CodingKeys>
+    do {
+      container = try decoder.container(keyedBy: CodingKeys.self)
+    } catch {
+      // Legacy format: a bare path string.
+      guard let pathString = try? decoder.singleValueContainer().decode(String.self) else { throw error }
       let path = URL(fileURLWithPath: pathString)
       self.target = PathInfo(path: pathString, name: path.lastPathComponent, exclude: nil)
       self.test = nil
       return
     }
-    
-    let container = try decoder.container(keyedBy: CodingKeys.self)
     self.test = try container.decodeIfPresent(PackageInformation.PathInfo.self, forKey: .test)
     self.target = try container.decode(PackageInformation.PathInfo.self, forKey: .target)
   }
