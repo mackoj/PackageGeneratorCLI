@@ -14,7 +14,7 @@ struct ArchitectureRules {
 
     @Test func loggersAreCentralised() throws {
         let sources = try Self.sources()
-        #expect(!sources.in("Sources/PackageGeneratorCLI/Logging").relativePaths.isEmpty)
+        #expect(!sources.in("Sources/PackageGeneratorCore/Logging").relativePaths.isEmpty)
         expectNone(Detect.strayLoggers(in: sources), rule: .loggersAreCentralised)
     }
 

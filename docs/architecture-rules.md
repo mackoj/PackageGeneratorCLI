@@ -24,7 +24,7 @@ Good:
 Loggers.importParsing.debug("Parsed \(file.lastPathComponent, privacy: .public)")
 ```
 
-### An `os.Logger` is made only in `Sources/PackageGeneratorCLI/Logging`.
+### An `os.Logger` is made only in `Sources/PackageGeneratorCore/Logging`.
 
 `loggers-are-centralised`: Every log line uses the subsystem `com.mackoj.PackageGeneratorCLI` and one of the categories listed in `Loggers.swift`, so `log stream --predicate 'subsystem == "com.mackoj.PackageGeneratorCLI"'` and Console.app filters see everything (CODING_STANDARDS.md, "Output"). A `Logger` made elsewhere invents a subsystem or category nobody filters on.
 

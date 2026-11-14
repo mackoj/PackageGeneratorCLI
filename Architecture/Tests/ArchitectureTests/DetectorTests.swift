@@ -38,7 +38,7 @@ import Testing
         let found = Detect.strayLoggers(
             in: scope(
                 #"static let output = Logger(subsystem: subsystem, category: "Output")"#,
-                at: "Sources/PackageGeneratorCLI/Logging/Loggers.swift"))
+                at: "Sources/PackageGeneratorCore/Logging/Loggers.swift"))
         #expect(found.isEmpty)
     }
 
